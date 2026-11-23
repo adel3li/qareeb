@@ -15,7 +15,8 @@
     "check-promises": "bun scripts/check-promises.ts",
     "fetch-quran": "bun scripts/fetch-quran.ts",
     "fetch-hadith": "bun scripts/fetch-hadith.ts",
-    "apply-edit": "bun scripts/apply-edit.ts"
+    "apply-edit": "bun scripts/apply-edit.ts",
+    "build-landing": "bun scripts/build-landing.ts"
   },
   "dependencies": {
     "lucide-react": "^1.78.0",

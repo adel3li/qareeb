@@ -1,0 +1,41 @@
+/* The landing page: the same tokens as the app (tokens.css), no framework. */
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--page); color: var(--text); font-family: var(--font-ui); }
+body { margin: 0; font-size: var(--fs-body); line-height: var(--lh-body); }
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.wrap { max-width: 1040px; margin-inline: auto; padding-inline: var(--gutter); }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; text-wrap: balance; margin: 0; }
+h1 { font-size: 2.5rem; line-height: 1.4; }
+h2 { font-size: var(--fs-title); line-height: var(--lh-title); margin-bottom: var(--space-6); }
+h3 { font-size: var(--fs-subtitle); line-height: var(--lh-subtitle); }
+p { margin: 0; }
+a { color: inherit; }
+.top { display: flex; align-items: center; justify-content: space-between; padding-block: var(--space-5); }
+.lockup { height: 40px; width: auto; display: block; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: var(--touch-target); padding: 0 22px; border-radius: var(--radius-control); font-weight: 600; text-decoration: none; }
+.btn--primary { min-height: var(--button-height); background: var(--cta); color: var(--cta-text); font-size: var(--fs-button); }
+.btn--primary:hover { background: var(--cta-hover); }
+.btn--quiet { border: 1px solid var(--hairline); color: var(--text); }
+.hero { display: grid; gap: var(--space-8); align-items: center; padding-block: var(--space-8) var(--space-12); }
+.hero__text { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-5); }
+.lead { font-size: var(--fs-body-lg); line-height: var(--lh-body-lg); color: var(--text-body); max-width: 36ch; }
+.note { font-size: var(--fs-body-sm); color: var(--text-muted); }
+.shot { display: block; width: 100%; max-width: 300px; height: auto; border-radius: 28px; border: 1px solid var(--hairline); box-shadow: var(--raised-shadow); background: var(--surface); }
+.shot--hero { justify-self: center; background-image: radial-gradient(70% 42% at 50% 40%, var(--glow), transparent 72%); }
+.steps, .promises { padding-block: var(--space-12); border-top: 1px solid var(--hairline); }
+.steps ol, .promises ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--stack); }
+.steps li, .promises li { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-card); padding: var(--card-padding); box-shadow: var(--card-shadow); display: flex; flex-direction: column; gap: var(--space-2); }
+.steps li p, .promises li p { color: var(--text-body); }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-8); }
+.gallery .shot { max-width: none; border-radius: 18px; }
+.foot { padding-block: var(--space-8) var(--space-12); border-top: 1px solid var(--hairline); color: var(--text-muted); font-size: var(--fs-body-sm); display: flex; flex-direction: column; gap: var(--space-3); }
+@media (min-width: 768px) {
+  .hero { grid-template-columns: 1.2fr 1fr; }
+  .steps ol, .promises ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  h1 { font-size: 2rem; }
+  .gallery { grid-template-columns: 1fr; justify-items: center; }
+  .gallery .shot { max-width: 280px; }
+}

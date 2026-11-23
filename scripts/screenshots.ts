@@ -2,7 +2,7 @@
  * Captures the app's screens for review against docs/screens/built/.
  * Runs against a running build (bun run build && bunx vite preview --port 4173).
  *
- *   bun scripts/screenshots.ts [outDir] [--only name,name] [--theme light|dark]
+ *   bun scripts/screenshots.ts [outDir] [--only name,name] [--theme light|dark] [--scale 2]
  *
  * The clock is fixed at Monday 23 November 2026 09:00 in Riyadh, and sample user
  * data marked «مثال» is put in storage. Development tool only: not shipped.
@@ -15,6 +15,7 @@ const BASE = process.env.BASE_URL ?? 'http://localhost:4173';
 const args = process.argv.slice(2);
 const out = args.find((a) => !a.startsWith('--') && !args[args.indexOf(a) - 1]?.startsWith('--')) ?? 'screens-out';
 const only = args.includes('--only') ? args[args.indexOf('--only') + 1].split(',') : null;
+const scale = args.includes('--scale') ? Number(args[args.indexOf('--scale') + 1]) : 1;
 const themes = args.includes('--theme') ? [args[args.indexOf('--theme') + 1]] : ['light', 'dark'];
 
 const env = (value: unknown) => JSON.stringify({ state: { value }, version: 1 });
@@ -128,7 +129,7 @@ for (const theme of themes) {
   for (const shot of SHOTS) {
     if (only && !only.includes(shot.name)) continue;
     const [width, height] = shot.size ?? [390, 844];
-    const ctx = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: 1, colorScheme: theme as 'light' | 'dark', locale: 'ar-SA', timezoneId: 'Asia/Riyadh', reducedMotion: 'reduce' });
+    const ctx = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: scale, colorScheme: theme as 'light' | 'dark', locale: 'ar-SA', timezoneId: 'Asia/Riyadh', reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     await page.clock.setFixedTime(new Date('2026-11-23T09:00:00+03:00'));
     const errors: string[] = [];

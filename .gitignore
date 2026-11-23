@@ -5,3 +5,4 @@ playwright-report
 src/content/generated/
 *.local
 .DS_Store
+landing/dist
