@@ -1,0 +1,54 @@
+/* The landing page: plain CSS on the same tokens as the app (tokens.css is copied next to it at build). */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--page); color: var(--text); font-family: var(--font-ui); font-size: var(--fs-body); line-height: var(--lh-body); }
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; text-wrap: balance; margin: 0; }
+h1 { font-size: 2.25rem; line-height: 1.45; }
+h2 { font-size: var(--fs-title); line-height: var(--lh-title); }
+h3 { font-size: 1.0625rem; line-height: 1.6; }
+p { margin: 0; color: var(--text-body); }
+img { max-width: 100%; height: auto; display: block; }
+
+.top, main > section, .foot { width: min(100% - 32px, 1040px); margin-inline: auto; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px; }
+.logo { height: 40px; width: auto; }
+.on-dark { display: none; }
+@media (prefers-color-scheme: dark) { .on-light { display: none; } .on-dark { display: block; } }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: var(--button-height-sm); padding: 0 22px; border-radius: var(--radius-control); font-weight: 600; font-size: var(--fs-button); text-decoration: none; }
+.btn--primary { background: var(--cta); color: var(--cta-text); }
+.btn--primary:hover { background: var(--cta-hover); }
+.btn--block { min-height: var(--button-height); }
+.btn--outline { color: var(--text); border: 1px solid var(--hairline); font-weight: 500; font-size: var(--fs-body); }
+
+.hero { display: grid; gap: 32px; align-items: center; padding-block: 24px 48px; }
+.hero__text { display: flex; flex-direction: column; gap: 18px; }
+.lead { font-size: var(--fs-body-lg); line-height: var(--lh-body-lg); }
+.note { font-size: var(--fs-body-sm); color: var(--text-muted); }
+
+.phone { margin: 0; justify-self: center; width: min(320px, 80vw); border: 1px solid var(--hairline); border-radius: 36px; overflow: hidden; box-shadow: var(--raised-shadow); background-color: var(--surface); }
+.phone--small { width: min(280px, 72vw); }
+
+.band { padding: 48px 24px; text-align: center; border-radius: var(--frame-arch-x) var(--frame-arch-x) var(--radius-card) var(--radius-card) / var(--frame-arch-y) var(--frame-arch-y) var(--radius-card) var(--radius-card); border: 1px solid var(--sacred-frame); background-color: var(--sacred-bg); padding-top: 96px; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+.band p { max-width: 560px; font-size: var(--fs-body-lg); line-height: var(--lh-body-lg); }
+
+.steps { display: grid; gap: 32px; align-items: center; padding-block: 56px; }
+.steps > div { display: flex; flex-direction: column; gap: 14px; }
+.steps ol { margin: 0; padding-inline-start: 22px; display: flex; flex-direction: column; gap: 8px; color: var(--text-body); }
+.steps b { color: var(--accent); font-weight: 600; margin-inline-end: 6px; }
+
+.promises { padding-block: 24px 56px; display: flex; flex-direction: column; gap: 20px; }
+.promises ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.promises li { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-card); box-shadow: var(--card-shadow); padding: 18px; display: flex; flex-direction: column; gap: 6px; }
+
+.cta { text-align: center; padding: 48px 24px 64px; display: flex; flex-direction: column; gap: 18px; align-items: center; background-image: radial-gradient(70% 42% at 50% 40%, var(--glow), transparent 72%); }
+.foot { padding-block: 24px 40px; border-top: 1px solid var(--hairline); }
+.foot p { font-size: var(--fs-caption); color: var(--text-muted); }
+
+@media (min-width: 768px) {
+  .hero { grid-template-columns: 1.2fr 1fr; padding-block: 48px 72px; }
+  h1 { font-size: 2.75rem; }
+  .steps { grid-template-columns: 1fr 1.3fr; }
+  .promises ul { grid-template-columns: 1fr 1fr; }
+}
