@@ -65,3 +65,7 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0052` | Qur'an, al-Mu'minun 29 (whole range; excerpt proposed) | verified |
 | `dua_0053` | Qur'an, al-Mu'minun 97–98 (whole range; excerpt proposed) | verified |
 | `dua_0055` | Qur'an, al-Mu'minun 118 (whole range; excerpt proposed) | verified |
+| `dua_0056` | Qur'an, al-Furqan 74 (whole range; excerpt proposed) | verified |
+| `dua_0058` | Qur'an, al-Shu'ara' 83–85 (whole range; excerpt proposed) | verified |
+| `dua_0059` | Qur'an, al-Shu'ara' 169 (whole range; excerpt proposed) | verified |
+| `dua_0061` | Qur'an, al-Naml 19 (whole range; excerpt proposed) | verified |
