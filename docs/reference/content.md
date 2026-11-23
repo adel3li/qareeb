@@ -50,12 +50,16 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0003` | Sunnah, Muslim 2705 | verified |
 | `dua_0004` | Qur'an, al-Baqara 127 (whole range; excerpt proposed) | verified |
 | `dua_0005` | Qur'an, al-Baqara 128 (whole range; excerpt proposed) | verified |
+| `dua_0006` | Sunnah, Muslim 918 (excerpt proposed) | pending_verification |
 | `dua_0007` | Qur'an, al-Baqara 129 (whole range; excerpt proposed) | verified |
 | `dua_0008` | Qur'an, al-Baqara 201 (whole range; excerpt proposed) | verified |
+| `dua_0009` | Sunnah, Muslim 920 (excerpt proposed) | pending_verification |
 | `dua_0010` | Qur'an, al-Baqara 250 (whole range; excerpt proposed) | verified |
 | `dua_0011` | Qur'an, al-Baqara 286 (whole range; excerpt proposed) | verified |
+| `dua_0012` | Sunnah, Bukhari 6306 (excerpt proposed) | pending_verification |
 | `dua_0013` | Qur'an, Al Imran 8 (whole range; excerpt proposed) | verified |
 | `dua_0014` | Qur'an, Al Imran 35 (whole range; excerpt proposed) | verified |
+| `dua_0015` | Sunnah, Muslim 2725 (excerpt proposed) | pending_verification |
 | `dua_0016` | Qur'an, Al Imran 38 (whole range; excerpt proposed) | verified |
 | `dua_0017` | Qur'an, Al Imran 147 (whole range; excerpt proposed) | verified |
 | `dua_0019` | Qur'an, Al Imran 173 (whole range; excerpt proposed) | verified |
