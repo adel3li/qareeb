@@ -4,7 +4,7 @@
 
 They are a reference for layout, states and flows. The design system in `design/system/` and the docs in `docs/handoff/` stay the source of truth: where a screen differs from them, they win. The cards in the screens were drafts, so red «مسودة» marks and `<<…>>` placeholders appear in them.
 
-Gallery: https://claude.ai/artifact/66d2V7aBbQNVgi5jHXxuLx
+Gallery of this earlier set: https://claude.ai/artifact/66d2V7aBbQNVgi5jHXxuLx. The app as built in this pull request is in `built/` (see the end of this file).
 
 ## أول تشغيل
 
@@ -121,3 +121,110 @@ At 768px and wider the tabs move into the top bar and the column stays centred.
 |---|---|---|
 | `wide-today.webp` | اليوم | 1280×820 |
 | `wide-calendar.webp` | المداومة |  |
+
+## The app as built (`built/`)
+
+`built/light/` and `built/dark/` hold 55 screens and states of the app in this pull request, captured from its production build (`vite preview`) with Playwright on 23 November 2026: the clock set to Monday 23 November 2026 (١٣ جمادى الآخرة ١٤٤٨), the same sample user data marked «مثال», and reduced motion. Phone screens are 390×844 at device scale 2 (tall screens captured full height); `large-text-*` are 360×640 at the 24px text size; `wide-*` are 1280×820. The three cards are `verified`, so no draft marks appear. The error screen is shown by blocking the content file. They sit beside the earlier reference set above, which stays as it was.
+
+Gallery: https://claude.ai/artifact/ThmtabxEvWUyPB8hcVqbzw
+
+
+### أول تشغيل
+
+| File | Screen |
+|---|---|
+| `onboarding-1.webp` | الشريحة ١ |
+| `onboarding-2.webp` | الشريحة ٢ |
+| `onboarding-3.webp` | الشريحة ٣ |
+| `onboarding-4.webp` | الشريحة ٤ |
+| `today-welcome.webp` | اليوم · دعاء الترحيب |
+
+### اليوم والمشاركة
+
+| File | Screen |
+|---|---|
+| `today.webp` | اليوم |
+| `today-sections.webp` | الأقسام مفتوحة |
+| `today-done.webp` | اليوم · تمّ |
+| `share-post.webp` | المشاركة · منشور |
+| `share-story.webp` | المشاركة · قصة مع وقفة |
+
+### عِش الدعاء
+
+| File | Screen |
+|---|---|
+| `live-1-paced.webp` | ١ · الحضور (يظهر) |
+| `live-1.webp` | ١ · الحضور |
+| `live-2.webp` | ٢ · الموقف |
+| `live-3.webp` | ٣ · المعنى |
+| `live-4.webp` | ٤ · حاجتك |
+| `live-5.webp` | ٥ · الدعاء |
+| `live-intention.webp` | النية |
+| `live-notebook.webp` | الدفتر |
+| `live-mydua.webp` | دعواتي |
+| `live-closing.webp` | الختام |
+| `live-confirm-close.webp` | إغلاق قبل الإتمام |
+
+### المكتبة
+
+| File | Screen |
+|---|---|
+| `library.webp` | مررتَ بها |
+| `library-search.webp` | البحث |
+| `library-noresults.webp` | لا نتائج |
+| `library-favorites.webp` | المفضلة |
+| `library-empty.webp` | فارغة |
+| `dua-page-hadith.webp` | صفحة الدعاء · حديث |
+| `dua-not-found.webp` | رابط غير موجود |
+
+### الدفتر
+
+| File | Screen |
+|---|---|
+| `notebook-found.webp` | ما وجدته |
+| `notebook-write.webp` | اكتب الآن |
+| `notebook-delete.webp` | تأكيد الحذف |
+| `notebook-empty.webp` | ما وجدته فارغ |
+| `mydua-open.webp` | دعواتي · أدعو بها |
+| `mydua-add.webp` | حاجة جديدة |
+| `mydua-answered-sheet.webp` | كيف استجاب الله؟ |
+| `mydua-answered.webp` | استُجيبت |
+| `mydua-empty.webp` | دعواتي فارغة |
+| `mydua-answered-empty.webp` | استُجيبت فارغة |
+
+### المداومة
+
+| File | Screen |
+|---|---|
+| `calendar.webp` | الشهر |
+| `calendar-day.webp` | يوم عشتَ فيه دعاءً |
+| `calendar-empty-day.webp` | يوم بلا دعاء |
+| `calendar-prev.webp` | الشهر السابق |
+| `calendar-reminder.webp` | تذكير في التقويم |
+
+### الإعدادات
+
+| File | Screen |
+|---|---|
+| `settings.webp` | الإعدادات |
+| `settings-privacy.webp` | سياسة الخصوصية |
+| `settings-about-content.webp` | عن المحتوى |
+| `settings-import.webp` | استيراد · الملخص |
+| `settings-import-error.webp` | استيراد · ملف تالف |
+| `settings-erase.webp` | امسح كل بياناتي |
+
+### حالات خاصة
+
+| File | Screen |
+|---|---|
+| `error.webp` | حدث خطأ |
+| `large-text-today.webp` | نص كبير · اليوم |
+| `large-text-calendar.webp` | نص كبير · المداومة |
+| `large-text-live.webp` | نص كبير · عِش الدعاء |
+
+### الشاشات العريضة
+
+| File | Screen |
+|---|---|
+| `wide-today.webp` | اليوم |
+| `wide-calendar.webp` | المداومة |
