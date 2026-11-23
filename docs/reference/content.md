@@ -130,5 +130,8 @@ Qur'an cards from `dua_0004` on show the whole verse range as `text` (`excerptAp
 | `dua_0093` | Qur'an, Sad 35 (whole range shown; excerpt in notes) | verified |
 | `dua_0094` | Sunnah, Bukhari 6316 (excerpt proposed) | pending_verification |
 | `dua_0095` | Qur'an, Ghafir 7–9 (whole range shown; excerpt in notes) | verified |
+| `dua_0096` | Sunnah, Bukhari 3370 (excerpt proposed) | pending_verification |
 | `dua_0097` | Qur'an, al-Anbiya' 112 (whole range shown; excerpt in notes) | verified |
+| `dua_0098` | Sunnah, Muslim 2708 (excerpt proposed) | pending_verification |
 | `dua_0099` | Qur'an, al-Mu'minun 26 (whole range shown; excerpt in notes) | verified |
+| `dua_0100` | Sunnah, Muslim 2713 (excerpt proposed) | pending_verification |
