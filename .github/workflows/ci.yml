@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.4
+      - run: bun install --frozen-lockfile
+      - run: bun run lint
+      - name: Unit tests in three time zones
+        run: |
+          TZ=Asia/Riyadh bun run test
+          TZ=UTC bun run test
+          TZ=America/New_York bun run test
+      - run: bun run validate-content
+      - run: bun run check-promises
+      - run: bun run build
+      - run: bunx playwright install --with-deps chromium
+      - run: bun run e2e -- --trace off
+        env:
+          CI: '1'

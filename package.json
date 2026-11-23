@@ -1,0 +1,42 @@
+{
+  "name": "qareeb",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run build-content && vite",
+    "build-content": "bun scripts/build-content.ts",
+    "build": "bun run validate-content && bun run build-content && vite build",
+    "preview": "vite preview --port 4173",
+    "lint": "bun run build-content && tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "validate-content": "bun scripts/validate-content.ts",
+    "check-promises": "bun scripts/check-promises.ts",
+    "fetch-quran": "bun scripts/fetch-quran.ts",
+    "fetch-hadith": "bun scripts/fetch-hadith.ts",
+    "build-landing": "bun scripts/build-landing.ts"
+  },
+  "dependencies": {
+    "lucide-react": "1.78.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7",
+    "zustand": "5.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/vite": "4.3.5",
+    "@types/bun": "^1.4.5",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "tailwindcss": "4.3.5",
+    "typescript": "5.9.3",
+    "vite": "8.3.8",
+    "vite-plugin-pwa": "2.0.0",
+    "vitest": "5.1.1",
+    "workbox-window": "7.4.1"
+  }
+}
