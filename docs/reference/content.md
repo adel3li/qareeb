@@ -124,8 +124,11 @@ Qur'an cards from `dua_0004` on show the whole verse range as `text` (`excerptAp
 | `dua_0075` | Qur'an, Nuh 28 (whole range shown; excerpt in notes) | verified |
 | `dua_0076` | Qur'an, al-Tahrim 8 (whole range shown; excerpt in notes) | verified |
 | `dua_0077` | Qur'an, al-Furqan 65–66 (whole range shown; excerpt in notes) | verified |
+| `dua_0090` | Sunnah, Muslim 2722 (excerpt proposed) | pending_verification |
 | `dua_0091` | Qur'an, al-'Ankabut 30 (whole range shown; excerpt in notes) | verified |
+| `dua_0092` | Sunnah, Muslim 589 (excerpt proposed) | pending_verification |
 | `dua_0093` | Qur'an, Sad 35 (whole range shown; excerpt in notes) | verified |
+| `dua_0094` | Sunnah, Bukhari 6316 (excerpt proposed) | pending_verification |
 | `dua_0095` | Qur'an, Ghafir 7–9 (whole range shown; excerpt in notes) | verified |
 | `dua_0097` | Qur'an, al-Anbiya' 112 (whole range shown; excerpt in notes) | verified |
 | `dua_0099` | Qur'an, al-Mu'minun 26 (whole range shown; excerpt in notes) | verified |
