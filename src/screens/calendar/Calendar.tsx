@@ -73,10 +73,10 @@ export default function Calendar() {
                     aria-pressed={isSelected}
                     onClick={() => setSelected(day.isoDate)}
                     className={[
-                      'box-border flex size-touch flex-col items-center justify-center gap-px rounded-pill border-solid p-0 font-sans text-t-body-sm',
+                      'box-border flex size-touch flex-col items-center justify-center gap-px rounded-pill p-0 font-sans text-t-body-sm',
                       c ? 'bg-surface-sunken font-semibold' : 'bg-transparent',
                       day.isFuture ? 'text-text-muted' : 'text-text',
-                      isSelected ? 'border-2 border-text' : day.isToday ? 'border border-dashed border-accent font-semibold' : 'border border-transparent',
+                      isSelected ? 'border-2 border-solid border-text' : day.isToday ? 'border border-dashed border-accent font-semibold' : 'border border-solid border-transparent',
                     ].join(' ')}
                   >
                     {day.arabicNumber}

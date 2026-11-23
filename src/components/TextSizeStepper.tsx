@@ -7,7 +7,9 @@ import { clampFontScale, parseFontScale } from '../lib/textSize';
 /** − and + around a typed value; the typed value is corrected on blur, never while typing. */
 export function TextSizeStepper({ value, onChange }: { value: number; onChange: (v: number) => void }) {
   const [draft, setDraft] = useState(toArabicNumerals(value));
-  useEffect(() => setDraft(toArabicNumerals(value)), [value]);
+  useEffect(() => {
+    setDraft(toArabicNumerals(value));
+  }, [value]);
   const step = (delta: number) => onChange(clampFontScale(value + delta));
   const btn = 'size-touch rounded-control border border-solid border-hairline bg-transparent font-sans text-t-subtitle text-text disabled:text-text-muted';
   return (

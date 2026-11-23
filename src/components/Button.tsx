@@ -3,11 +3,11 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react';
 export type ButtonVariant = 'primary' | 'secondary' | 'quiet' | 'danger';
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-control border-0 px-[22px] font-sans text-center no-underline transition-colors duration-fast ease-standard';
+  'inline-flex items-center justify-center gap-2 rounded-control px-[22px] font-sans text-center no-underline transition-colors duration-fast ease-standard';
 const variants: Record<ButtonVariant, string> = {
-  primary: 'min-h-btn bg-cta text-cta-text text-t-button font-semibold hover:bg-cta-hover active:bg-cta-hover',
+  primary: 'min-h-btn border-0 bg-cta text-cta-text text-t-button font-semibold hover:bg-cta-hover active:bg-cta-hover',
   secondary: 'min-h-btn-sm bg-transparent text-text border border-solid border-hairline text-t-body font-medium active:bg-surface-sunken',
-  quiet: 'min-h-touch px-3.5 bg-transparent text-text-muted text-t-body-sm',
+  quiet: 'min-h-touch border-0 px-3.5 bg-transparent text-text-muted text-t-body-sm',
   danger: 'min-h-btn-sm bg-transparent text-danger border border-solid border-hairline text-t-body font-medium active:bg-surface-sunken',
 };
 const waiting = 'aria-disabled:bg-surface-sunken aria-disabled:text-text-muted aria-disabled:cursor-default aria-disabled:hover:bg-surface-sunken';

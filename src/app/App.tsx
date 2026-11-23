@@ -22,7 +22,9 @@ const ShareSheet = lazy(() => import('../features/share/ShareSheet'));
 
 export function App() {
   useAppearance();
-  useEffect(loadContent, []);
+  useEffect(() => {
+    loadContent();
+  }, []);
   const onboarded = useOnboarding((s) => s.completedAt !== null);
   const status = useContent((s) => s.status);
   const preview = useContent((s) => s.file?.meta.preview ?? false);
@@ -48,7 +50,10 @@ export function App() {
 function Shell({ ready }: { ready: boolean }) {
   const route = useRoute();
   const tab = tabOf(route);
-  useEffect(() => window.scrollTo(0, 0), [route.name, route.name === 'dua' ? route.id : '']);
+  const routeKey = route.name === "dua" ? route.id : route.name;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [routeKey]);
   return (
     <>
       <WideHeader current={tab} />

@@ -43,7 +43,7 @@ export function TabBar({ current }: { current: TabName | null }) {
 /** At 768px and wider the tabs move into the top bar, with the wordmark and the settings button. */
 export function WideHeader({ current }: { current: TabName | null }) {
   return (
-    <header className="mx-auto hidden w-full max-w-[1040px] items-center justify-between gap-4 px-6 pt-5 wide:flex">
+    <header className="mx-auto hidden w-full max-w-[760px] items-center justify-between gap-4 px-gutter pt-5 wide:flex">
       <a href="#/today" className="text-text" aria-label={ar.app.name}>
         <Wordmark className="h-[34px]" />
       </a>
