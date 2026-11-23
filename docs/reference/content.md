@@ -66,6 +66,9 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0026` | Qur'an, al-A'raf 151 (whole range; excerpt proposed) | verified |
 | `dua_0028` | Qur'an, Yunus 85–86 (whole range; excerpt proposed) | verified |
 | `dua_0029` | Qur'an, Hud 47 (whole range; excerpt proposed) | verified |
+| `dua_0031` | Qur'an, Yusuf 33 (whole range; excerpt proposed) | verified |
+| `dua_0032` | Qur'an, Yusuf 86 (whole range; excerpt proposed) | verified |
+| `dua_0034` | Qur'an, Yusuf 101 (whole range; excerpt proposed) | verified |
 | `dua_0044` | Qur'an, Maryam 4 (whole range; excerpt proposed) | verified |
 | `dua_0046` | Qur'an, Ta-Ha 25–28 (whole range; excerpt proposed) | verified |
 | `dua_0047` | Qur'an, Ta-Ha 114 (whole range; excerpt proposed) | verified |
