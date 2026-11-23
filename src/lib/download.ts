@@ -1,0 +1,17 @@
+/** Saves a file on the user's device. Nothing leaves the device. */
+export function downloadFile(contents: BlobPart, fileName: string, type: string): void {
+  const blob = new Blob([contents], { type });
+  downloadBlob(blob, fileName);
+}
+
+export function downloadBlob(blob: Blob, fileName: string): void {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = fileName;
+  a.rel = 'noopener';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}

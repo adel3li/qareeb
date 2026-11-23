@@ -88,7 +88,14 @@ export const duaSchema = z
     }),
     reflections: z.array(nonEmpty).min(1).max(3),
     steps: z.array(guidedStepSchema).length(5),
-    whenToSay: z.strictObject({ text: nonEmpty, note: z.string().optional() }).optional(),
+    whenToSay: z
+      .strictObject({
+        text: nonEmpty,
+        note: z.string().optional(),
+        /** Set only when the source names one of the intention moments; that tile is then pre-selected. */
+        intention: z.enum(['sujood', 'after_prayer', 'before_sleep', 'now']).optional(),
+      })
+      .optional(),
     repeatCount: z.number().int().min(2).max(100).optional(),
     journalPrompt: nonEmpty,
     themes: z.array(nonEmpty),

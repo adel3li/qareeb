@@ -1,0 +1,177 @@
+/* The app's stylesheet: Tailwind on the design tokens.
+   tokens.css is design/tokens.css, generated from design/system/tokens.json; never edit it here.
+   `@theme inline reference` maps token variables to utility names without redefining them,
+   so utilities read the tokens directly and the theme switch on <html> reaches everything. */
+@import 'tailwindcss' source('../');
+@import './tokens.css';
+
+@theme inline reference {
+  --color-*: initial;
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-hairline: var(--hairline);
+  --color-text: var(--text);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-cta: var(--cta);
+  --color-cta-text: var(--cta-text);
+  --color-cta-hover: var(--cta-hover);
+  --color-sacred-quran: var(--sacred-quran);
+  --color-sacred-hadith: var(--sacred-hadith);
+  --color-sacred-frame: var(--sacred-frame);
+  --color-sacred-bg: var(--sacred-bg);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-focus-ring: var(--focus-ring);
+  --color-overlay: var(--overlay);
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --font-*: initial;
+  --font-sans: var(--font-ui);
+  --font-kufi: var(--font-heading);
+  --font-mushaf: var(--font-quran);
+
+  /* Type styles, prefixed t- so they never meet the text colours. */
+  --text-*: initial;
+  --text-t-display: var(--fs-display);
+  --text-t-display--line-height: var(--lh-display);
+  --text-t-display--font-weight: var(--fw-display);
+  --text-t-title: var(--fs-title);
+  --text-t-title--line-height: var(--lh-title);
+  --text-t-title--font-weight: var(--fw-title);
+  --text-t-live: var(--fs-live);
+  --text-t-live--line-height: var(--lh-live);
+  --text-t-live--font-weight: var(--fw-live);
+  --text-t-subtitle: var(--fs-subtitle);
+  --text-t-subtitle--line-height: var(--lh-subtitle);
+  --text-t-subtitle--font-weight: var(--fw-subtitle);
+  --text-t-body-lg: var(--fs-body-lg);
+  --text-t-body-lg--line-height: var(--lh-body-lg);
+  --text-t-body: var(--fs-body);
+  --text-t-body--line-height: var(--lh-body);
+  --text-t-body-sm: var(--fs-body-sm);
+  --text-t-body-sm--line-height: var(--lh-body-sm);
+  --text-t-label: var(--fs-label);
+  --text-t-label--line-height: var(--lh-label);
+  --text-t-caption: var(--fs-caption);
+  --text-t-caption--line-height: var(--lh-caption);
+  --text-t-tab: var(--fs-tab);
+  --text-t-tab--line-height: var(--lh-tab);
+  --text-t-button: var(--fs-button);
+  --text-t-button--line-height: var(--lh-button);
+  --text-t-quran: var(--fs-quran);
+  --text-t-quran--line-height: var(--lh-quran);
+  --text-t-quran-live: var(--fs-quran-live);
+  --text-t-quran-live--line-height: var(--lh-quran-live);
+  --text-t-hadith: var(--fs-hadith);
+  --text-t-hadith--line-height: var(--lh-hadith);
+  --text-t-hadith-full: var(--fs-hadith-full);
+  --text-t-hadith-full--line-height: var(--lh-hadith-full);
+
+  /* Spacing is px and does not grow with the text-size setting. */
+  --spacing: 4px;
+  --spacing-gutter: var(--gutter);
+  --spacing-card: var(--card-padding);
+  --spacing-stack: var(--stack);
+  --spacing-touch: var(--touch-target);
+  --spacing-btn: var(--button-height);
+  --spacing-btn-sm: var(--button-height-sm);
+  --spacing-icon-md: var(--icon-md);
+  --spacing-icon-lg: var(--icon-lg);
+  --container-content: var(--content-max);
+
+  --radius-*: initial;
+  --radius-sm: var(--radius-sm);
+  --radius-control: var(--radius-control);
+  --radius-card: var(--radius-card);
+  --radius-sheet: var(--radius-sheet);
+  --radius-pill: var(--radius-pill);
+
+  --shadow-*: initial;
+  --shadow-card: var(--card-shadow);
+  --shadow-raised: var(--raised-shadow);
+
+  --ease-standard: var(--ease-standard);
+  --ease-exit: var(--ease-exit);
+
+  --breakpoint-*: initial;
+  --breakpoint-wide: 768px;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background-color: var(--page);
+    color: var(--text);
+    font-family: var(--font-ui);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    -webkit-tap-highlight-color: transparent;
+  }
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+@utility arch {
+  border-radius: var(--frame-arch-x) var(--frame-arch-x) var(--radius-card) var(--radius-card) /
+    var(--frame-arch-y) var(--frame-arch-y) var(--radius-card) var(--radius-card);
+}
+
+@utility glow {
+  background-image: radial-gradient(70% 42% at 50% 40%, var(--glow), transparent 72%);
+}
+
+@utility duration-fast {
+  transition-duration: var(--duration-fast);
+}
+@utility duration-base {
+  transition-duration: var(--duration-base);
+}
+@utility duration-slow {
+  transition-duration: var(--duration-slow);
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@keyframes q-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes q-rise {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@utility animate-fade {
+  animation: q-fade var(--duration-base) var(--ease-standard);
+}
+@utility animate-sheet {
+  animation: q-rise var(--duration-slow) var(--ease-standard);
+}
+@utility animate-scrim {
+  animation: q-fade var(--duration-slow) var(--ease-standard);
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

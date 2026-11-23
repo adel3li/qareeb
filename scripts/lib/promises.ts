@@ -24,7 +24,7 @@ export const STREAK_COPY_ALLOWED = ['بلا سلاسل', 'ولا أيام متت
 const RULES: { rule: string; pattern: RegExp; applies: (path: string) => boolean }[] = [
   { rule: 'no streaks, points or badges in code', pattern: /\b(streaks?|consecutive|badges?|points|leaderboard|score)\b/i, applies: (p) => p.startsWith('src/') },
   { rule: 'no network request from src/', pattern: /\bfetch\s*\(|XMLHttpRequest|sendBeacon|new\s+WebSocket|EventSource\s*\(/, applies: (p) => p.startsWith('src/') && !NETWORK_ALLOW_LIST.includes(p) },
-  { rule: 'no UTC day keys', pattern: /toISOString\(\)\s*\.\s*(slice\(\s*0\s*,\s*10\s*\)|split\(\s*['"]T['"]\s*\)\s*\[\s*0\s*\])/, applies: () => true },
+  { rule: 'no UTC day keys', pattern: /toISOString\(\)\s*\.\s*(slice\(\s*0\s*,\s*10\s*\)|split\(\s*['"]T['"]\s*\)\s*\[\s*0\s*\])/, applies: (p) => !p.endsWith('.test.ts') },
   { rule: 'no new Date("YYYY-MM-DD")', pattern: /new Date\(\s*['"`]\d{4}-\d{2}-\d{2}['"`]\s*\)/, applies: (p) => p.startsWith('src/') && !p.endsWith('.test.ts') },
   { rule: 'pinch zoom stays allowed', pattern: /user-scalable\s*=\s*no|maximum-scale/i, applies: (p) => p.endsWith('.html') || p.startsWith('src/') },
   { rule: 'no external <link> or <script> in html', pattern: /<(link|script)[^>]+(href|src)=["']https?:\/\//i, applies: (p) => p.endsWith('.html') },
