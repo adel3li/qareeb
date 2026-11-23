@@ -1,0 +1,50 @@
+# Content
+
+The model and the review process are in `docs/handoff/03-content-model.md`; this file documents the code that implements them.
+
+## Files
+
+| Path | What |
+|---|---|
+| `content/duas/dua_NNNN.json` | One card per file. The file name is the id |
+| `content/sources/` | The copied Qur'an texts and their licences (see its `README.md`). Never edited |
+| `content/retired-ids.json` | Ids that were removed and may never be reused |
+| `content/edits/` | Records of how the three cards were filled and verified on the earlier branch (word ranges into the copied text). Kept as provenance; no script reads them now |
+| `src/content/schema.ts` | The Zod schema of a card, shared by the scripts and the app; `AppDua` and `ContentFile` for the generated file |
+| `src/content/generated/duas.json` | Written by `build-content`; git-ignored; loaded by the app as its own chunk (`src/content/load.ts`) |
+
+## Scripts
+
+| Command | What it does |
+|---|---|
+| `bun run fetch-quran [ids…] [--check]` | Copies `quran.fullText` from `content/sources/quran-qpc-hafs.json` (King Fahd Complex, `text_qpc_hafs`) by surah and ayah, joined by one space, and sets `quran.edition`. Compares the letters with Tanzil's Uthmani text (`scripts/lib/quran.ts`, `quranLetters`: marks, small letters, tatweel and numbers removed, hamza seats and alef forms folded); all 6236 verses match (`scripts/quran.test.ts`). A card whose `text` is a placeholder gets the whole range; otherwise `text` must already be a verbatim part (the excerpt is the reviewer's decision) |
+| `bun run fetch-hadith [ids…] [--check]` | Copies `hadith.fullNarration` and `hadith.gradings` from the open sunnah.com dataset (`fawazahmed0/hadith-api`) by collection and number; uses the sunnah.com page in `hadith.sourceUrl` (book/hadith) to pick the narration, else the first narration under the number. Refuses collections outside al-Bukhari and Muslim (`decide()` in `src/lib/hadithGrade.ts`) and any text with a corrupted character (to be pasted from a second source). Needs the network |
+| `bun run validate-content` | The checks of 03 §7 (`scripts/lib/validate.ts`): structure (strict Zod), ids (unique, file name, not retired), unique order, the Qur'an text equal to the source and its letters equal to Tanzil, `text` a verbatim part of the verses or the narration, hadith scope and corrupted characters, glossary terms taken from the dua, every ﴿…﴾ in authored text found in the Qur'an and every «…» found in the card's sacred text, placeholders (`<<…>>`, `[[…]]`: an error from `verified` on, a warning in drafts), the five steps in order with 8–30 s, and the review gate (below) |
+| `bun run build-content` | The review gate: writes the cards at `CONTENT_MIN_LEVEL` or above (default `verified`, decision ٦), without their verification report, with their `level` and a `searchText` (titles, the dua, and Tanzil's simple spelling of the verses, for search only). `CONTENT_PREVIEW=1` includes every card and marks the build as preview. `CONTENT_MIN_COUNT` (default 1) fails the build below that many cards |
+
+`bun run build` runs `validate-content` and `build-content` before `vite build`.
+
+## Review gate
+
+| Status | Needs |
+|---|---|
+| `verified` | `review.verification.at` and a report; checks `textMatchesSource`, `referenceCorrect`, `gradeConfirmed`, `contextFaithful`, `meaningSourced`, `quotedFragmentsMatch` |
+| `approved` | All of the above, `review.approval.reviewer` and `review.approval.at`, and all nine checks (including `excerptApproved`, `authoredReviewed`, `secondSourceMatched`) |
+
+`review.approval` filled on a card that is not `approved` is an error. Claude never sets `approval` or `approved`.
+
+## In the app
+
+- Sacred text is shown only through `src/components/SacredText.tsx` (`SacredText` in the arch; `SacredTerm` for glossary words; `FullNarration` for the full hadith). Qur'an text in the KFGQPC HAFS face between ﴿ ﴾, hadith in Noto Sans Arabic 500 between « ».
+- «عن المحتوى» reads the counts by level from `meta.levels` and says «طابقنا كل نص مع مصدره، والمراجعة العلمية جارية» unless every card shown is `approved`.
+- In a preview build: a banner, a «مسودة» chip on cards below `verified`, and placeholders shown in the warning colour (`Authored`).
+- Today's dua: `resolveToday` in `src/lib/daily.ts` (welcome dua `WELCOME_DUA_ID` in `src/config.ts` until it is lived, then the rotation by `order`, `effectiveFrom` supported).
+- `whenToSay.intention` (optional) pre-selects that tile in the intention step when the source names the moment. None of the current cards sets it.
+
+## Current cards
+
+| Id | Kind | Status |
+|---|---|---|
+| `dua_0001` | Qur'an, al-Fatiha 6–7 (welcome dua) | verified |
+| `dua_0002` | Qur'an, al-Anbiya 87 | verified |
+| `dua_0003` | Sunnah, Muslim 2705 | verified |
