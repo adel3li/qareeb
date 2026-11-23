@@ -43,8 +43,107 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 
 ## Current cards
 
+Qur'an cards from `dua_0004` on show the whole verse range as `text` (`excerptApproved: false`); the proposed excerpt is a word range in `review.notes`. Sunnah cards from `dua_0006` on keep `text` and glossary terms as placeholders until the reviewer picks the word range proposed in `review.notes`; they stay `pending_verification` and appear only in a preview build. `order` equals the id number: two Qur'an cards, then one Sunnah card.
+
 | Id | Kind | Status |
 |---|---|---|
 | `dua_0001` | Qur'an, al-Fatiha 6–7 (welcome dua) | verified |
-| `dua_0002` | Qur'an, al-Anbiya 87 | verified |
+| `dua_0002` | Qur'an, al-Anbiya' 87 | verified |
 | `dua_0003` | Sunnah, Muslim 2705 | verified |
+| `dua_0004` | Qur'an, al-Baqara 127 (whole range shown; excerpt in notes) | verified |
+| `dua_0005` | Qur'an, al-Baqara 128 (whole range shown; excerpt in notes) | verified |
+| `dua_0006` | Sunnah, Muslim 918 (excerpt proposed) | pending_verification |
+| `dua_0007` | Qur'an, al-Baqara 129 (whole range shown; excerpt in notes) | verified |
+| `dua_0008` | Qur'an, al-Baqara 201 (whole range shown; excerpt in notes) | verified |
+| `dua_0009` | Sunnah, Muslim 920 (excerpt proposed) | pending_verification |
+| `dua_0010` | Qur'an, al-Baqara 250 (whole range shown; excerpt in notes) | verified |
+| `dua_0011` | Qur'an, al-Baqara 286 (whole range shown; excerpt in notes) | verified |
+| `dua_0012` | Sunnah, Bukhari 6306 (excerpt proposed) | pending_verification |
+| `dua_0013` | Qur'an, Al Imran 8 (whole range shown; excerpt in notes) | verified |
+| `dua_0014` | Qur'an, Al Imran 35 (whole range shown; excerpt in notes) | verified |
+| `dua_0015` | Sunnah, Muslim 2725 (excerpt proposed) | pending_verification |
+| `dua_0016` | Qur'an, Al Imran 38 (whole range shown; excerpt in notes) | verified |
+| `dua_0017` | Qur'an, Al Imran 147 (whole range shown; excerpt in notes) | verified |
+| `dua_0018` | Sunnah, Bukhari 143 (excerpt proposed) | pending_verification |
+| `dua_0019` | Qur'an, Al Imran 173 (whole range shown; excerpt in notes) | verified |
+| `dua_0020` | Qur'an, Al Imran 191–194 (whole range shown; excerpt in notes) | verified |
+| `dua_0021` | Sunnah, Bukhari 6334 (excerpt proposed) | pending_verification |
+| `dua_0022` | Qur'an, al-A'raf 23 (whole range shown; excerpt in notes) | verified |
+| `dua_0023` | Qur'an, al-A'raf 89 (whole range shown; excerpt in notes) | verified |
+| `dua_0024` | Sunnah, Muslim 2697 (excerpt proposed) | pending_verification |
+| `dua_0025` | Qur'an, al-A'raf 126 (whole range shown; excerpt in notes) | verified |
+| `dua_0026` | Qur'an, al-A'raf 151 (whole range shown; excerpt in notes) | verified |
+| `dua_0027` | Sunnah, Muslim 2721 (excerpt proposed) | pending_verification |
+| `dua_0028` | Qur'an, Yunus 85–86 (whole range shown; excerpt in notes) | verified |
+| `dua_0029` | Qur'an, Hud 47 (whole range shown; excerpt in notes) | verified |
+| `dua_0030` | Sunnah, Bukhari 2893 (excerpt proposed) | pending_verification |
+| `dua_0031` | Qur'an, Yusuf 33 (whole range shown; excerpt in notes) | verified |
+| `dua_0032` | Qur'an, Yusuf 86 (whole range shown; excerpt in notes) | verified |
+| `dua_0033` | Sunnah, Bukhari 6346 (excerpt proposed) | pending_verification |
+| `dua_0034` | Qur'an, Yusuf 101 (whole range shown; excerpt in notes) | verified |
+| `dua_0035` | Qur'an, Ibrahim 35 (whole range shown; excerpt in notes) | verified |
+| `dua_0036` | Sunnah, Bukhari 6382 (excerpt proposed) | pending_verification |
+| `dua_0037` | Qur'an, Ibrahim 37 (whole range shown; excerpt in notes) | verified |
+| `dua_0038` | Qur'an, Ibrahim 40–41 (whole range shown; excerpt in notes) | verified |
+| `dua_0039` | Sunnah, Bukhari 6398 (excerpt proposed) | pending_verification |
+| `dua_0040` | Qur'an, al-Isra' 24 (whole range shown; excerpt in notes) | verified |
+| `dua_0041` | Qur'an, al-Isra' 80 (whole range shown; excerpt in notes) | verified |
+| `dua_0042` | Sunnah, Muslim 2720 (excerpt proposed) | pending_verification |
+| `dua_0043` | Qur'an, al-Kahf 10 (whole range shown; excerpt in notes) | verified |
+| `dua_0044` | Qur'an, Maryam 4 (whole range shown; excerpt in notes) | verified |
+| `dua_0045` | Sunnah, Muslim 202 (excerpt proposed) | pending_verification |
+| `dua_0046` | Qur'an, Ta-Ha 25–28 (whole range shown; excerpt in notes) | verified |
+| `dua_0047` | Qur'an, Ta-Ha 114 (whole range shown; excerpt in notes) | verified |
+| `dua_0048` | Sunnah, Muslim 2491 (excerpt proposed) | pending_verification |
+| `dua_0049` | Qur'an, al-Anbiya' 83 (whole range shown; excerpt in notes) | verified |
+| `dua_0050` | Qur'an, al-Anbiya' 89 (whole range shown; excerpt in notes) | verified |
+| `dua_0051` | Sunnah, Bukhari 3477 (excerpt proposed) | pending_verification |
+| `dua_0052` | Qur'an, al-Mu'minun 29 (whole range shown; excerpt in notes) | verified |
+| `dua_0053` | Qur'an, al-Mu'minun 97–98 (whole range shown; excerpt in notes) | verified |
+| `dua_0054` | Sunnah, Muslim 1763 (excerpt proposed) | pending_verification |
+| `dua_0055` | Qur'an, al-Mu'minun 118 (whole range shown; excerpt in notes) | verified |
+| `dua_0056` | Qur'an, al-Furqan 74 (whole range shown; excerpt in notes) | verified |
+| `dua_0057` | Sunnah, Bukhari 2933 (excerpt proposed) | pending_verification |
+| `dua_0058` | Qur'an, al-Shu'ara' 83–85 (whole range shown; excerpt in notes) | verified |
+| `dua_0059` | Qur'an, al-Shu'ara' 169 (whole range shown; excerpt in notes) | verified |
+| `dua_0060` | Sunnah, Muslim 2202 (excerpt proposed) | pending_verification |
+| `dua_0061` | Qur'an, al-Naml 19 (whole range shown; excerpt in notes) | verified |
+| `dua_0062` | Qur'an, al-Qasas 16 (whole range shown; excerpt in notes) | verified |
+| `dua_0063` | Sunnah, Bukhari 5743 (excerpt proposed) | pending_verification |
+| `dua_0064` | Qur'an, al-Qasas 21 (whole range shown; excerpt in notes) | verified |
+| `dua_0065` | Qur'an, al-Qasas 22 (whole range shown; excerpt in notes) | verified |
+| `dua_0066` | Sunnah, Bukhari 3020 (excerpt proposed) | pending_verification |
+| `dua_0067` | Qur'an, al-Qasas 24 (whole range shown; excerpt in notes) | verified |
+| `dua_0068` | Qur'an, al-Saffat 100 (whole range shown; excerpt in notes) | verified |
+| `dua_0069` | Sunnah, Muslim 2739 (excerpt proposed) | pending_verification |
+| `dua_0070` | Qur'an, al-Ahqaf 15 (whole range shown; excerpt in notes) | verified |
+| `dua_0071` | Qur'an, al-Qamar 10 (whole range shown; excerpt in notes) | verified |
+| `dua_0072` | Qur'an, al-Hashr 10 (whole range shown; excerpt in notes) | verified |
+| `dua_0073` | Qur'an, al-Tahrim 11 (whole range shown; excerpt in notes) | verified |
+| `dua_0074` | Qur'an, al-Mumtahana 4–5 (whole range shown; excerpt in notes) | verified |
+| `dua_0075` | Qur'an, Nuh 28 (whole range shown; excerpt in notes) | verified |
+| `dua_0076` | Qur'an, al-Tahrim 8 (whole range shown; excerpt in notes) | verified |
+| `dua_0077` | Qur'an, al-Furqan 65–66 (whole range shown; excerpt in notes) | verified |
+| `dua_0078` | Sunnah, Bukhari 247 (excerpt proposed) | pending_verification |
+| `dua_0079` | Qur'an, al-Baqara 126 (whole range shown; excerpt in notes) | verified |
+| `dua_0080` | Sunnah, Muslim 1342 (excerpt proposed) | pending_verification |
+| `dua_0081` | Qur'an, al-Baqara 285 (whole range shown; excerpt in notes) | verified |
+| `dua_0082` | Sunnah, Bukhari 744 (excerpt proposed) | pending_verification |
+| `dua_0083` | Qur'an, Al Imran 16 (whole range shown; excerpt in notes) | verified |
+| `dua_0084` | Sunnah, Muslim 899 (excerpt proposed) | pending_verification |
+| `dua_0085` | Qur'an, Al Imran 53 (whole range shown; excerpt in notes) | verified |
+| `dua_0086` | Sunnah, Bukhari 6365 (excerpt proposed) | pending_verification |
+| `dua_0087` | Qur'an, al-A'raf 155–156 (whole range shown; excerpt in notes) | verified |
+| `dua_0088` | Sunnah, Muslim 2655 (excerpt proposed) | pending_verification |
+| `dua_0089` | Qur'an, al-Mu'minun 109 (whole range shown; excerpt in notes) | verified |
+| `dua_0090` | Sunnah, Muslim 2722 (excerpt proposed) | pending_verification |
+| `dua_0091` | Qur'an, al-'Ankabut 30 (whole range shown; excerpt in notes) | verified |
+| `dua_0092` | Sunnah, Muslim 589 (excerpt proposed) | pending_verification |
+| `dua_0093` | Qur'an, Sad 35 (whole range shown; excerpt in notes) | verified |
+| `dua_0094` | Sunnah, Bukhari 6316 (excerpt proposed) | pending_verification |
+| `dua_0095` | Qur'an, Ghafir 7–9 (whole range shown; excerpt in notes) | verified |
+| `dua_0096` | Sunnah, Bukhari 3370 (excerpt proposed) | pending_verification |
+| `dua_0097` | Qur'an, al-Anbiya' 112 (whole range shown; excerpt in notes) | verified |
+| `dua_0098` | Sunnah, Muslim 2708 (excerpt proposed) | pending_verification |
+| `dua_0099` | Qur'an, al-Mu'minun 26 (whole range shown; excerpt in notes) | verified |
+| `dua_0100` | Sunnah, Muslim 2713 (excerpt proposed) | pending_verification |
