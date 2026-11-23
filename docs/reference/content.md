@@ -94,3 +94,6 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0068` | Qur'an, al-Saffat 100 (whole range; excerpt proposed) | verified |
 | `dua_0070` | Qur'an, al-Ahqaf 15 (whole range; excerpt proposed) | verified |
 | `dua_0071` | Qur'an, al-Qamar 10 (whole range; excerpt proposed) | verified |
+| `dua_0072` | Qur'an, al-Hashr 10 (whole range; excerpt proposed) | verified |
+| `dua_0073` | Qur'an, al-Tahrim 11 (whole range; excerpt proposed) | verified |
+| `dua_0074` | Qur'an, al-Mumtahana 4–5 (whole range; excerpt proposed) | verified |
