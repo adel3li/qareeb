@@ -1,0 +1,43 @@
+@layer base {
+  html {
+    background: var(--page);
+    color: var(--text);
+    font-family: var(--font-ui);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--page);
+    color: var(--text);
+    font-family: var(--font-ui);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+  h1, h2, h3 { text-wrap: balance; }
+  :focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+  button { cursor: pointer; }
+  input, textarea, button, select { font: inherit; color: inherit; }
+}
+
+/* The arch frames only sacred text and the guided experience. */
+@utility arch {
+  border-radius: var(--frame-arch-x) var(--frame-arch-x) var(--radius-card) var(--radius-card) / var(--frame-arch-y) var(--frame-arch-y) var(--radius-card) var(--radius-card);
+}
+@utility glow {
+  background-image: radial-gradient(70% 42% at 50% 40%, var(--glow), transparent 72%);
+}
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@utility fade-in {
+  animation: q-fade var(--duration-base) var(--ease-standard);
+}
+@keyframes q-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes q-rise { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+@utility sheet-in {
+  animation: q-rise var(--duration-slow) var(--ease-standard);
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

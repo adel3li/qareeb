@@ -1,0 +1,108 @@
+/* Tailwind v4 theme mapped onto the design tokens (src/styles/tokens.css, generated from design/system/tokens.json).
+   Components use these utilities only: no hex, rgb or named colours outside tokens.css. */
+@import "tailwindcss" source("../");
+@import "./tokens.css";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme inline {
+  --color-*: initial;
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-raised: var(--surface-raised);
+  --color-sunken: var(--surface-sunken);
+  --color-hairline: var(--hairline);
+  --color-ink: var(--text);
+  --color-body: var(--text-body);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-cta: var(--cta);
+  --color-cta-text: var(--cta-text);
+  --color-cta-hover: var(--cta-hover);
+  --color-sacred-quran: var(--sacred-quran);
+  --color-sacred-hadith: var(--sacred-hadith);
+  --color-sacred-frame: var(--sacred-frame);
+  --color-sacred-bg: var(--sacred-bg);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-focus: var(--focus-ring);
+  --color-overlay: var(--overlay);
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --font-*: initial;
+  --font-ui: var(--font-ui);
+  --font-heading: var(--font-heading);
+  --font-quran: var(--font-quran);
+
+  --radius-*: initial;
+  --radius-sm: var(--radius-sm);
+  --radius-control: var(--radius-control);
+  --radius-card: var(--radius-card);
+  --radius-sheet: var(--radius-sheet);
+  --radius-pill: var(--radius-pill);
+
+  --shadow-*: initial;
+  --shadow-card: var(--card-shadow);
+  --shadow-raised: var(--raised-shadow);
+
+  --spacing-gutter: var(--gutter);
+  --spacing-card: var(--card-padding);
+  --spacing-stack: var(--stack);
+  --spacing-touch: var(--touch-target);
+  --spacing-btn: var(--button-height);
+  --spacing-btn-sm: var(--button-height-sm);
+  --spacing-icon-md: var(--icon-md);
+  --spacing-icon-lg: var(--icon-lg);
+  --container-content: var(--content-max);
+
+  --ease-standard: var(--ease-standard);
+  --ease-exit: var(--ease-exit);
+
+  --text-*: initial;
+  --text-t-display: var(--fs-display);
+  --text-t-display--line-height: var(--lh-display);
+  --text-t-display--font-weight: var(--fw-display);
+  --text-t-title: var(--fs-title);
+  --text-t-title--line-height: var(--lh-title);
+  --text-t-title--font-weight: var(--fw-title);
+  --text-t-live: var(--fs-live);
+  --text-t-live--line-height: var(--lh-live);
+  --text-t-live--font-weight: var(--fw-live);
+  --text-t-subtitle: var(--fs-subtitle);
+  --text-t-subtitle--line-height: var(--lh-subtitle);
+  --text-t-subtitle--font-weight: var(--fw-subtitle);
+  --text-t-body-lg: var(--fs-body-lg);
+  --text-t-body-lg--line-height: var(--lh-body-lg);
+  --text-t-body-lg--font-weight: var(--fw-body-lg);
+  --text-t-body: var(--fs-body);
+  --text-t-body--line-height: var(--lh-body);
+  --text-t-body--font-weight: var(--fw-body);
+  --text-t-body-sm: var(--fs-body-sm);
+  --text-t-body-sm--line-height: var(--lh-body-sm);
+  --text-t-body-sm--font-weight: var(--fw-body-sm);
+  --text-t-label: var(--fs-label);
+  --text-t-label--line-height: var(--lh-label);
+  --text-t-label--font-weight: var(--fw-label);
+  --text-t-caption: var(--fs-caption);
+  --text-t-caption--line-height: var(--lh-caption);
+  --text-t-caption--font-weight: var(--fw-caption);
+  --text-t-tab: var(--fs-tab);
+  --text-t-tab--line-height: var(--lh-tab);
+  --text-t-tab--font-weight: var(--fw-tab);
+  --text-t-button: var(--fs-button);
+  --text-t-button--line-height: var(--lh-button);
+  --text-t-button--font-weight: var(--fw-button);
+  --text-t-quran: var(--fs-quran);
+  --text-t-quran--line-height: var(--lh-quran);
+  --text-t-quran--font-weight: var(--fw-quran);
+  --text-t-quran-live: var(--fs-quran-live);
+  --text-t-quran-live--line-height: var(--lh-quran-live);
+  --text-t-quran-live--font-weight: var(--fw-quran-live);
+  --text-t-hadith: var(--fs-hadith);
+  --text-t-hadith--line-height: var(--lh-hadith);
+  --text-t-hadith--font-weight: var(--fw-hadith);
+  --text-t-hadith-full: var(--fs-hadith-full);
+  --text-t-hadith-full--line-height: var(--lh-hadith-full);
+  --text-t-hadith-full--font-weight: var(--fw-hadith-full);
+}
