@@ -47,7 +47,7 @@ export default function Onboarding() {
           {slide.title}
         </h1>
         <p className="m-0 max-w-[34ch] text-t-body-lg text-text-body">{slide.body}</p>
-        <p className="m-0 text-t-body font-medium text-accent">{slide.line}</p>
+        <p className="m-0 text-t-body font-medium text-text-body">{slide.line}</p>
       </section>
       <div className="flex flex-col gap-2">
         {last ? (
