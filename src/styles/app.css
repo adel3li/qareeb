@@ -148,3 +148,25 @@
     animation: none;
   }
 }
+
+/* Sheets rise from the bottom; with reduced motion they simply appear (durations are 0). */
+.q-sheet {
+  animation: q-rise var(--duration-slow) var(--ease-standard);
+}
+
+@keyframes q-rise {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .q-sheet {
+    animation: none;
+  }
+}

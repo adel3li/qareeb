@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "content": "bun scripts/build-content.ts",
-    "dev": "bun run content && vite",
-    "build": "bun run content && tsc --noEmit && vite build",
+    "dev": "CONTENT_PREVIEW=1 bun run content && CONTENT_PREVIEW=1 vite",
+    "build": "CONTENT_GATE=strict bun run content && tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "bun run content && tsc --noEmit",
     "test": "bun run content && vitest run",

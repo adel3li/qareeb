@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - name: Type check (strict)
+        run: bun run lint
+      - name: Unit tests
+        run: bun run test
+      - name: Unit tests in Riyadh time
+        run: bun run test
+        env:
+          TZ: Asia/Riyadh
+      - name: Unit tests in New York time
+        run: bun run test
+        env:
+          TZ: America/New_York
+      - name: Content checks
+        run: bun run validate-content
+      - name: Product promises
+        run: bun run check-promises
+      - name: Preview build (drafts included, marked)
+        run: bun run build
+        env:
+          CONTENT_PREVIEW: '1'
+      - name: Install Chromium for Playwright
+        run: bunx playwright install --with-deps chromium
+      - name: End-to-end tests
+        run: bun run e2e -- --trace off
+
+  production-content-gate:
+    # The production build includes only cards that reached CONTENT_MIN_LEVEL (verified) and
+    # fails while fewer than CONTENT_MIN_COUNT (30) do. Until the content reaches that, this job
+    # is expected to fail; it is kept visible, and does not block the checks above.
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - name: Production build behind the review gate
+        run: bun run build
