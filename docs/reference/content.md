@@ -52,6 +52,9 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0005` | Qur'an, al-Baqara 128 (whole range; excerpt proposed) | verified |
 | `dua_0007` | Qur'an, al-Baqara 129 (whole range; excerpt proposed) | verified |
 | `dua_0008` | Qur'an, al-Baqara 201 (whole range; excerpt proposed) | verified |
+| `dua_0010` | Qur'an, al-Baqara 250 (whole range; excerpt proposed) | verified |
+| `dua_0011` | Qur'an, al-Baqara 286 (whole range; excerpt proposed) | verified |
+| `dua_0013` | Qur'an, Al Imran 8 (whole range; excerpt proposed) | verified |
 | `dua_0019` | Qur'an, Al Imran 173 (whole range; excerpt proposed) | verified |
 | `dua_0020` | Qur'an, Al Imran 191–194 (whole range; excerpt proposed) | verified |
 | `dua_0022` | Qur'an, al-A'raf 23 (whole range; excerpt proposed) | verified |
