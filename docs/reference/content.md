@@ -97,3 +97,6 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0072` | Qur'an, al-Hashr 10 (whole range; excerpt proposed) | verified |
 | `dua_0073` | Qur'an, al-Tahrim 11 (whole range; excerpt proposed) | verified |
 | `dua_0074` | Qur'an, al-Mumtahana 4–5 (whole range; excerpt proposed) | verified |
+| `dua_0075` | Qur'an, Nuh 28 (whole range; excerpt proposed) | verified |
+| `dua_0076` | Qur'an, al-Tahrim 8 (whole range; excerpt proposed) | verified |
+| `dua_0077` | Qur'an, al-Furqan 65–66 (whole range; excerpt proposed) | verified |
