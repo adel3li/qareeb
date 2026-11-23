@@ -7,7 +7,7 @@
     "dev": "bun run build-content && vite",
     "build": "bun run build-content && tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "tsc --noEmit",
+    "lint": "bun scripts/build-content.ts > /dev/null && tsc --noEmit",
     "test": "vitest run",
     "e2e": "playwright test",
     "validate-content": "bun scripts/validate-content.ts",

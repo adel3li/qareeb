@@ -63,7 +63,8 @@ export function setAnswered(id: string, answered: boolean, answerNote?: string):
     list.map((d) => {
       if (d.id !== id) return d;
       if (!answered) {
-        const { answeredAt: _a, answerNote: _n, ...rest } = d;
+        // The answer note is kept, so switching back on brings it back.
+        const { answeredAt: _a, ...rest } = d;
         return rest;
       }
       const note = answerNote?.trim();

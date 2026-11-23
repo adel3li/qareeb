@@ -1,2 +1,13 @@
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import './styles/main.css';
-document.getElementById('root')!.innerHTML = '<p class="rounded-card bg-surface text-ink font-heading text-t-title p-card">x</p>';
+import { App } from './app/App';
+import { ErrorBoundary } from './app/ErrorBoundary';
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </StrictMode>,
+);
