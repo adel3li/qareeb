@@ -69,3 +69,7 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0058` | Qur'an, al-Shu'ara' 83–85 (whole range; excerpt proposed) | verified |
 | `dua_0059` | Qur'an, al-Shu'ara' 169 (whole range; excerpt proposed) | verified |
 | `dua_0061` | Qur'an, al-Naml 19 (whole range; excerpt proposed) | verified |
+| `dua_0062` | Qur'an, al-Qasas 16 (whole range; excerpt proposed) | verified |
+| `dua_0064` | Qur'an, al-Qasas 21 (whole range; excerpt proposed) | verified |
+| `dua_0065` | Qur'an, al-Qasas 22 (whole range; excerpt proposed) | verified |
+| `dua_0067` | Qur'an, al-Qasas 24 (whole range; excerpt proposed) | verified |
