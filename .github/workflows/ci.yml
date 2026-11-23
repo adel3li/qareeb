@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - name: Type check (strict)
+        run: bun run lint
+      - name: Unit tests (Riyadh)
+        run: TZ=Asia/Riyadh bun run test
+      - name: Unit tests (New York)
+        run: TZ=America/New_York bun run test
+      - name: Unit tests (UTC)
+        run: TZ=UTC bun run test
+      - name: Content checks
+        run: bun run validate-content
+      - name: Content matches the hadith dataset
+        run: bun scripts/fetch-hadith.ts --check
+      - name: Promises
+        run: bun run check-promises
+      - name: Production build
+        run: bun run build
+      - name: Install Playwright browser
+        run: bunx playwright install --with-deps chromium
+      - name: End-to-end tests on the production build
+        run: bun run e2e -- --trace off

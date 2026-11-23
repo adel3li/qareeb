@@ -21,6 +21,8 @@ bun run validate-content  # schema, sacred-text and review checks on content/dua
 bun run check-promises    # product promises as code checks
 bun run build             # production build: content at CONTENT_MIN_LEVEL or above (verified, by the owner's decision)
 CONTENT_PREVIEW=1 bun run build   # preview build: drafts included, marked
+bun run build-landing     # static landing page into landing/dist
+bun scripts/screenshots.ts out --scale 2   # every screen, light and dark, against `vite preview --port 4173`
 ```
 
 ## Rules that are easy to break
