@@ -48,3 +48,4 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0001` | Qur'an, al-Fatiha 6–7 (welcome dua) | verified |
 | `dua_0002` | Qur'an, al-Anbiya 87 | verified |
 | `dua_0003` | Sunnah, Muslim 2705 | verified |
+| `dua_0004` | Qur'an, al-Baqara 127 (whole verse; excerpt proposed) | verified |
