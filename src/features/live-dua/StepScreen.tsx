@@ -80,7 +80,8 @@ function RepeatCounter({ count }: { count: number }) {
 /** «تذكّر حاجاتك في دعائك اليوم», with three open needs if the user asks (a setting that can be turned off). */
 function MyDuasReminder() {
   const enabled = useSettings((s) => s.showMyDuasInFlow);
-  const open = useMyDuas((s) => s.items.filter((d) => !d.answeredAt));
+  const items = useMyDuas((s) => s.items);
+  const open = items.filter((d) => !d.answeredAt);
   const [shown, setShown] = useState(false);
   if (!enabled || open.length === 0) return null;
   return (

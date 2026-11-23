@@ -6,10 +6,9 @@ import { z } from 'zod';
  * see docs/reference/content.md for what each holds and who may write it.
  */
 
-export const DUA_KINDS = ['quran', 'sunnah', 'athar'] as const;
-export const STEP_ORDER = ['presence', 'scene', 'meaning', 'need', 'supplicate'] as const;
-export const REVIEW_STATUSES = ['draft', 'pending_verification', 'verified', 'approved', 'needs_changes'] as const;
-export const INTENTIONS = ['sujood', 'after_prayer', 'before_sleep', 'now'] as const;
+import { DUA_KINDS, INTENTIONS, REVIEW_STATUSES, STEP_ORDER } from './constants';
+
+export { DUA_KINDS, INTENTIONS, REVIEW_STATUSES, STEP_ORDER };
 
 export const citationSchema = z.object({
   work: z.string().min(1),

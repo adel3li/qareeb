@@ -9,7 +9,7 @@ import type {
   quranSourceSchema,
   reviewSchema,
 } from './schema';
-import { DUA_KINDS, INTENTIONS, REVIEW_STATUSES, STEP_ORDER } from './schema';
+import { DUA_KINDS, INTENTIONS, REVIEW_STATUSES, STEP_ORDER } from './constants';
 
 export { DUA_KINDS, INTENTIONS, REVIEW_STATUSES, STEP_ORDER };
 

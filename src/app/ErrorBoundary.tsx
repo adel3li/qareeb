@@ -1,6 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { ar } from '../copy/ar';
-import { exportBackup } from '../features/backup/backup';
+import { exportBackup } from '../features/backup/export';
 
 /** The root error boundary: «حدث خطأ», reload, and save a copy of the data first. */
 export class ErrorBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
