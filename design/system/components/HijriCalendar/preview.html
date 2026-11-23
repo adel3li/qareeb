@@ -1,0 +1,34 @@
+<!-- @dsCard group="Calendar" height=460 subtitle="Jumada al-Akhirah 1448, from Saturday: lived days, today (13), the chosen day (12)" -->
+<div class="q-demo" dir="rtl" lang="ar">
+  <section class="q-cal" aria-label="تقويم جمادى الآخرة ١٤٤٨">
+    <div class="q-cal__head">
+      <button type="button" class="q-iconbtn" aria-label="الشهر السابق: جمادى الأولى"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button>
+      <h2 class="q-cal__month">جمادى الآخرة ١٤٤٨</h2>
+      <button type="button" class="q-iconbtn" aria-label="الشهر التالي: رجب" disabled style="color: var(--hairline);"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></button>
+    </div>
+    <div class="q-cal__grid" role="grid" id="q-grid"></div>
+  </section>
+</div>
+<script>
+  (function () {
+    var grid = document.getElementById('q-grid');
+    var wd = ['سبت', 'أحد', 'اثنين', 'ثلاثاء', 'أربعاء', 'خميس', 'جمعة'];
+    var ar = function (n) { return String(n).replace(/\d/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'[d]; }); };
+    var lived = [6, 7, 9, 10, 11, 12], today = 13, chosen = 12, first = 4, days = 29;
+    wd.forEach(function (w) { var s = document.createElement('span'); s.className = 'q-cal__wd'; s.setAttribute('role', 'columnheader'); s.textContent = w; grid.appendChild(s); });
+    for (var k = 0; k < first + days; k++) {
+      var cell = document.createElement('span'); cell.className = 'q-cal__cell'; cell.setAttribute('role', 'gridcell');
+      var n = k - first + 1;
+      if (n >= 1) {
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'q-day';
+        if (lived.indexOf(n) >= 0) b.classList.add('q-day--lived');
+        if (n === today) b.classList.add('q-day--today');
+        if (n > today) b.classList.add('q-day--future');
+        b.setAttribute('aria-pressed', n === chosen ? 'true' : 'false');
+        b.textContent = ar(n);
+        cell.appendChild(b);
+      }
+      grid.appendChild(cell);
+    }
+  })();
+</script>

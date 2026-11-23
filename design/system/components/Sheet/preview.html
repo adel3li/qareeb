@@ -1,0 +1,25 @@
+<!-- @dsCard group="Overlays" height=520 subtitle="the share sheet over the scrim" -->
+<div class="q-demo" dir="rtl" lang="ar" style="padding: 0; gap: 0;">
+  <div class="q-scrim">
+    <section class="q-sheet" role="dialog" aria-modal="true" aria-labelledby="q-share-title">
+      <span class="q-sheet__grip" aria-hidden="true"></span>
+      <div class="q-sheet__head">
+        <h2 class="q-sheet__title" id="q-share-title">مشاركة الدعاء</h2>
+        <button type="button" class="q-iconbtn" aria-label="إغلاق" style="margin-inline-end: -10px;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+      </div>
+      <div class="q-seg" role="radiogroup" aria-label="مقاس الصورة">
+        <button type="button" class="q-seg__opt" role="radio" aria-checked="true">منشور ٤:٥</button>
+        <button type="button" class="q-seg__opt" role="radio" aria-checked="false">قصة ٩:١٦</button>
+      </div>
+      <div class="q-seg" role="radiogroup" aria-label="محتوى الصورة">
+        <button type="button" class="q-seg__opt" role="radio" aria-checked="false">الدعاء</button>
+        <button type="button" class="q-seg__opt" role="radio" aria-checked="true">مع الموقف</button>
+        <button type="button" class="q-seg__opt" role="radio" aria-checked="false">مع وقفة</button>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
+        <button type="button" class="q-btn q-btn--secondary">نسخ النص</button>
+        <button type="button" class="q-btn q-btn--primary">مشاركة الصورة</button>
+      </div>
+    </section>
+  </div>
+</div>

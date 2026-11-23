@@ -1,0 +1,207 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-23T16:35:44Z"
+  },
+  "title": "قريب",
+  "namespace": "Qareeb",
+  "libraries": [],
+  "sections": {},
+  "groups": [
+    "Logos",
+    "App icons",
+    "Splash and social",
+    "Content"
+  ],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "wordmark-on-light.svg",
+        "wordmark-on-dark.svg",
+        "lockup-on-light.svg",
+        "lockup-on-dark.svg",
+        "mark-on-light.svg",
+        "mark-on-dark.svg"
+      ],
+      "files": {
+        "wordmark-on-light.svg": {
+          "name": "wordmark-on-light.svg",
+          "blob": "b9815c4875cc210364406d3f7b056b81",
+          "size": 2013,
+          "type": "image/svg+xml"
+        },
+        "wordmark-on-dark.svg": {
+          "name": "wordmark-on-dark.svg",
+          "blob": "148ce4502ff4dc952f701181f0591457",
+          "size": 2013,
+          "type": "image/svg+xml"
+        },
+        "lockup-on-light.svg": {
+          "name": "lockup-on-light.svg",
+          "blob": "094569d2d4ac1107cc851247414834ea",
+          "size": 2541,
+          "type": "image/svg+xml"
+        },
+        "lockup-on-dark.svg": {
+          "name": "lockup-on-dark.svg",
+          "blob": "0c6afae9b7553bba8de887bf50e9d3af",
+          "size": 2540,
+          "type": "image/svg+xml"
+        },
+        "mark-on-light.svg": {
+          "name": "mark-on-light.svg",
+          "blob": "b99e4cb8f4e22ef6ee5c51500af9b387",
+          "size": 674,
+          "type": "image/svg+xml"
+        },
+        "mark-on-dark.svg": {
+          "name": "mark-on-dark.svg",
+          "blob": "39a7117c8d76258e65100ddbb6abcab0",
+          "size": 673,
+          "type": "image/svg+xml"
+        }
+      }
+    },
+    "App icons": {
+      "name": "App icons",
+      "tile": "m",
+      "order": [
+        "icon.svg",
+        "icon-maskable.svg",
+        "favicon.svg",
+        "icon-1024.png",
+        "icon-512.png",
+        "icon-192.png",
+        "icon-maskable-512.png",
+        "icon-maskable-192.png",
+        "apple-touch-icon.png",
+        "favicon-32.png"
+      ],
+      "files": {
+        "icon.svg": {
+          "name": "icon.svg",
+          "blob": "c7d80d4c3ba9d908c9ab2f062dd5e311",
+          "size": 999,
+          "type": "image/svg+xml"
+        },
+        "icon-maskable.svg": {
+          "name": "icon-maskable.svg",
+          "blob": "68091d007287455c45acceb292282486",
+          "size": 1061,
+          "type": "image/svg+xml"
+        },
+        "favicon.svg": {
+          "name": "favicon.svg",
+          "blob": "2a7a2208bea8b16554616ca08326e3ab",
+          "size": 756,
+          "type": "image/svg+xml"
+        },
+        "icon-1024.png": {
+          "name": "icon-1024.png",
+          "blob": "615266e08def6d0e789c2091404ad238",
+          "size": 216932,
+          "type": "image/png"
+        },
+        "icon-512.png": {
+          "name": "icon-512.png",
+          "blob": "ca0e653f9c84fee51a949104c3163780",
+          "size": 61975,
+          "type": "image/png"
+        },
+        "icon-192.png": {
+          "name": "icon-192.png",
+          "blob": "c7d3d61b126d8a322db84c71a73ca8ce",
+          "size": 12603,
+          "type": "image/png"
+        },
+        "icon-maskable-512.png": {
+          "name": "icon-maskable-512.png",
+          "blob": "4918a1bf16faa3f780c98979eb5eaefa",
+          "size": 34970,
+          "type": "image/png"
+        },
+        "icon-maskable-192.png": {
+          "name": "icon-maskable-192.png",
+          "blob": "87c8c9a7b8824678df076b5bf1a17dd6",
+          "size": 7086,
+          "type": "image/png"
+        },
+        "apple-touch-icon.png": {
+          "name": "apple-touch-icon.png",
+          "blob": "24a83b93d04dc687fac8eb5e071f61c4",
+          "size": 8061,
+          "type": "image/png"
+        },
+        "favicon-32.png": {
+          "name": "favicon-32.png",
+          "blob": "fd48a599e5f83195aa84b3e4de6d72d9",
+          "size": 1072,
+          "type": "image/png"
+        }
+      }
+    },
+    "Splash and social": {
+      "name": "Splash and social",
+      "tile": "l",
+      "order": [
+        "splash-light.svg",
+        "splash-dark.svg",
+        "splash-light-1179x2556.png",
+        "splash-dark-1179x2556.png",
+        "og-image-1200x630.png"
+      ],
+      "files": {
+        "splash-light.svg": {
+          "name": "splash-light.svg",
+          "blob": "608560cb03e4dc1d5ea545b756059671",
+          "size": 2974,
+          "type": "image/svg+xml"
+        },
+        "splash-dark.svg": {
+          "name": "splash-dark.svg",
+          "blob": "9bc14d9aa4c755d859d5afc1382f0b6f",
+          "size": 2973,
+          "type": "image/svg+xml"
+        },
+        "splash-light-1179x2556.png": {
+          "name": "splash-light-1179x2556.png",
+          "blob": "72c28ccf55d2ec89e66f442bde4469c8",
+          "size": 127188,
+          "type": "image/png"
+        },
+        "splash-dark-1179x2556.png": {
+          "name": "splash-dark-1179x2556.png",
+          "blob": "23b1e0f961cca80acab76ee4adada70a",
+          "size": 127075,
+          "type": "image/png"
+        },
+        "og-image-1200x630.png": {
+          "name": "og-image-1200x630.png",
+          "blob": "c376056ad34c698c13c75b08615a619b",
+          "size": 400075,
+          "type": "image/png"
+        }
+      }
+    },
+    "Content": {
+      "name": "Content",
+      "tile": "s",
+      "order": [],
+      "files": {}
+    }
+  },
+  "blobs": {},
+  "docs": {
+    "sections": []
+  },
+  "lastChange": {
+    "by": "Claude",
+    "at": "2026-11-23T16:35:44Z",
+    "via": "Claude Code",
+    "note": "First version: tokens in two themes, brand book, sacred-text and voice rules, 22 components, logo, icons, splash and link preview."
+  }
+}

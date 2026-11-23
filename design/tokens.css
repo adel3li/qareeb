@@ -1,101 +1,240 @@
-/*
- * قريب: candidate identities as semantic tokens.
- *
- * Three directions from docs/handoff/10-identity-brief.md, each with a light and a dark theme.
- * Components read ONLY these names (the brief's list, plus the few identity extras at the end
- * of each block), so choosing a direction means keeping one block and deleting the others.
- *
- *   data-dir   = sahar (السَّحَر) | bab (الباب المفتوح) | hibr (حبر وورق)
- *   data-theme = light | dark
- *
- * Contrast is checked by design/tools/contrast.mjs (results in design/README.md).
- * The Qur'an font is fixed by decision 4 (KFGQPC Uthmanic Script HAFS) and is not themed.
- */
+/* قريب: design tokens. GENERATED from design/system/tokens.json by design/tools/build-tokens.mjs. Do not edit. */
 
-/* ───────────────────────── السَّحَر: pre-dawn blue, warm light from the horizon ───────────────────────── */
-[data-dir='sahar'][data-theme='dark'] {
-  --page: #0a1520;
-  --live-glow: radial-gradient(120% 75% at 50% 100%, rgba(240, 166, 124, 0.32), rgba(240, 166, 124, 0) 66%);
-  --page-glow: radial-gradient(140% 60% at 50% 100%, rgba(240, 166, 124, 0.2), rgba(240, 166, 124, 0) 64%),
-    radial-gradient(90% 40% at 50% -8%, rgba(96, 136, 190, 0.16), rgba(96, 136, 190, 0) 70%);
-  --surface: #122131;
-  --surface-raised: #1a2b3e;
-  --surface-sunken: #0d1926;
-  --hairline: #24384d;
-  --text: #eef2f6;
-  --text-body: #c3cedb;
-  --text-muted: #93a5b8;
-  --accent: #efb08a;
-  --cta: #f1b28c;
-  --cta-text: #1a110b;
-  --cta-hover: #f6c4a4;
-  --sacred-quran: #f8f4ee;
-  --sacred-hadith: #eef2f6;
-  --sacred-frame: #2b425a;
-  --sacred-bg: #102030;
-  --success: #86d3ad;
-  --danger: #f2a0a0;
-  --focus-ring: #f6c4a4;
-  --overlay: rgba(4, 9, 14, 0.66);
-  --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
-  --raised-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
-  --theme-color: #0a1520;
-  /* identity extras */
-  --font-ui: 'Readex Pro', system-ui, sans-serif;
-  --font-heading: 'Readex Pro', system-ui, sans-serif;
-  --heading-weight: 600;
-  --radius-card: 24px;
-  --radius-control: 999px;
-  --radius-frame: 20px;
-  --frame-side: 1px;
-  --frame-pad-top: 28px;
-  --radius-frame-lg: 48px;
-  --frame-pad-top-lg: 72px;
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/fonts/NotoSansArabic-400.arabic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
 }
 
-[data-dir='sahar'][data-theme='light'] {
-  --page: #ecf0f4;
-  --live-glow: radial-gradient(120% 75% at 50% 100%, rgba(240, 160, 118, 0.38), rgba(240, 160, 118, 0) 66%);
-  --page-glow: radial-gradient(130% 55% at 50% 110%, rgba(240, 160, 118, 0.3), rgba(240, 160, 118, 0) 62%);
-  --surface: #fafbfc;
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/fonts/NotoSansArabic-400.latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-200B, U+2012-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/fonts/NotoSansArabic-500.arabic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/fonts/NotoSansArabic-500.latin.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-200B, U+2012-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/fonts/NotoSansArabic-700.arabic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/fonts/NotoSansArabic-700.latin.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-200B, U+2012-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url('/fonts/NotoKufiArabic-700.arabic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url('/fonts/NotoKufiArabic-700.latin.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-200B, U+2012-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'KFGQPC HAFS';
+  src: url('/fonts/UthmanicHafs1Ver18.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  color-scheme: light;
+  --page: #e7e4de;
+  --surface: #f5f3ef;
   --surface-raised: #ffffff;
-  --surface-sunken: #e2e8ee;
-  --hairline: #d2dbe4;
-  --text: #0f1c29;
-  --text-body: #33465a;
-  --text-muted: #536679;
-  --accent: #2f5d8c;
-  --cta: #1b3553;
+  --surface-sunken: #dcd8d0;
+  --hairline: #cfc9be;
+  --text: #1c1a17;
+  --text-body: #46413a;
+  --text-muted: #625c53;
+  --accent: #7a6850;
+  --cta: #0c6f68;
   --cta-text: #ffffff;
-  --cta-hover: #24456a;
-  --sacred-quran: #0f1c29;
-  --sacred-hadith: #0f1c29;
-  --sacred-frame: #ccd7e2;
-  --sacred-bg: #f4f7f9;
-  --success: #1e7a4f;
-  --danger: #b3261e;
-  --focus-ring: #2f5d8c;
-  --overlay: rgba(15, 28, 41, 0.45);
-  --card-shadow: 0 10px 30px rgba(27, 53, 83, 0.08);
-  --raised-shadow: 0 18px 48px rgba(27, 53, 83, 0.18);
-  --theme-color: #ecf0f4;
-  --font-ui: 'Readex Pro', system-ui, sans-serif;
-  --font-heading: 'Readex Pro', system-ui, sans-serif;
-  --heading-weight: 600;
-  --radius-card: 24px;
-  --radius-control: 999px;
-  --radius-frame: 20px;
-  --frame-side: 1px;
-  --frame-pad-top: 28px;
-  --radius-frame-lg: 48px;
-  --frame-pad-top-lg: 72px;
+  --cta-hover: #095a54;
+  --sacred-quran: #1a1815;
+  --sacred-hadith: #1c1a17;
+  --sacred-frame: #cbc3b5;
+  --sacred-bg: #fbfaf7;
+  --success: #286643;
+  --danger: #a63a2e;
+  --focus-ring: #0c6f68;
+  --overlay: rgba(28, 26, 23, 0.45);
+  --glow: rgba(12, 111, 104, 0.1);
+  --card-shadow: 0 1px 2px rgba(28, 26, 23, 0.06);
+  --raised-shadow: 0 18px 48px rgba(28, 26, 23, 0.18);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --gutter: 16px;
+  --card-padding: 18px;
+  --stack: 14px;
+  --touch-target: 44px;
+  --button-height: 54px;
+  --button-height-sm: 48px;
+  --icon-md: 20px;
+  --icon-lg: 22px;
+  --content-max: 560px;
+  --radius-sm: 10px;
+  --radius-control: 14px;
+  --radius-card: 18px;
+  --radius-sheet: 24px;
+  --radius-pill: 999px;
+  --frame-arch-x: 180px;
+  --frame-arch-y: 120px;
+  --frame-arch-x-lg: 460px;
+  --frame-arch-y-lg: 320px;
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --pace-sentence: 2800ms;
+  --closing-hold: 2000ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --font-ui: "Noto Sans Arabic", system-ui, sans-serif;
+  --font-heading: "Noto Kufi Arabic", "Noto Sans Arabic", sans-serif;
+  --font-quran: "KFGQPC HAFS", serif;
+  --fs-display: 1.75rem;
+  --lh-display: 1.5;
+  --fw-display: 700;
+  --ff-display: var(--font-heading);
+  --fs-title: 1.5rem;
+  --lh-title: 1.5;
+  --fw-title: 700;
+  --ff-title: var(--font-heading);
+  --fs-live: 1.375rem;
+  --lh-live: 1.8182;
+  --fw-live: 700;
+  --ff-live: var(--font-heading);
+  --fs-subtitle: 1.25rem;
+  --lh-subtitle: 1.7;
+  --fw-subtitle: 700;
+  --ff-subtitle: var(--font-heading);
+  --fs-body-lg: 1.0625rem;
+  --lh-body-lg: 1.8824;
+  --fw-body-lg: 400;
+  --ff-body-lg: var(--font-ui);
+  --fs-body: 1rem;
+  --lh-body: 1.75;
+  --fw-body: 400;
+  --ff-body: var(--font-ui);
+  --fs-body-sm: 0.9375rem;
+  --lh-body-sm: 1.7333;
+  --fw-body-sm: 400;
+  --ff-body-sm: var(--font-ui);
+  --fs-label: 0.875rem;
+  --lh-label: 1.5714;
+  --fw-label: 500;
+  --ff-label: var(--font-ui);
+  --fs-caption: 0.8125rem;
+  --lh-caption: 1.6154;
+  --fw-caption: 500;
+  --ff-caption: var(--font-ui);
+  --fs-tab: 0.75rem;
+  --lh-tab: 1.5;
+  --fw-tab: 600;
+  --ff-tab: var(--font-ui);
+  --fs-button: 1.0625rem;
+  --lh-button: 1.4118;
+  --fw-button: 600;
+  --ff-button: var(--font-ui);
+  --fs-quran: 1.75rem;
+  --lh-quran: 2.05;
+  --fw-quran: 400;
+  --ff-quran: var(--font-quran);
+  --fs-quran-live: 2rem;
+  --lh-quran-live: 2.05;
+  --fw-quran-live: 400;
+  --ff-quran-live: var(--font-quran);
+  --fs-hadith: 1.375rem;
+  --lh-hadith: 2;
+  --fw-hadith: 500;
+  --ff-hadith: var(--font-ui);
+  --fs-hadith-full: 1.0625rem;
+  --lh-hadith-full: 2.05;
+  --fw-hadith-full: 400;
+  --ff-hadith-full: var(--font-ui);
 }
 
-/* ───────────────────────── الباب المفتوح: stone and basalt, one luminous colour for action ───────────────────────── */
-[data-dir='bab'][data-theme='dark'] {
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --page: #12110f;
+    --surface: #1c1a17;
+    --surface-raised: #26231f;
+    --surface-sunken: #0e0d0b;
+    --hairline: #35312b;
+    --text: #f2eee6;
+    --text-body: #cec6b9;
+    --text-muted: #a39b8d;
+    --accent: #c4b294;
+    --cta: #4cc7ba;
+    --cta-text: #072320;
+    --cta-hover: #72d5ca;
+    --sacred-quran: #f7f3ea;
+    --sacred-hadith: #f2eee6;
+    --sacred-frame: #3d3830;
+    --sacred-bg: #211f1b;
+    --success: #86d3ad;
+    --danger: #f0a094;
+    --focus-ring: #72d5ca;
+    --overlay: rgba(6, 5, 4, 0.7);
+    --glow: rgba(76, 199, 186, 0.16);
+    --card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    --raised-shadow: 0 18px 48px rgba(0, 0, 0, 0.5);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
   --page: #12110f;
-  --live-glow: radial-gradient(70% 42% at 50% 40%, rgba(76, 199, 186, 0.16), rgba(76, 199, 186, 0) 72%);
-  --page-glow: none;
   --surface: #1c1a17;
   --surface-raised: #26231f;
   --surface-sunken: #0e0d0b;
@@ -115,137 +254,15 @@
   --danger: #f0a094;
   --focus-ring: #72d5ca;
   --overlay: rgba(6, 5, 4, 0.7);
-  --card-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+  --glow: rgba(76, 199, 186, 0.16);
+  --card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
   --raised-shadow: 0 18px 48px rgba(0, 0, 0, 0.5);
-  --theme-color: #12110f;
-  --font-ui: 'Noto Sans Arabic', system-ui, sans-serif;
-  --font-heading: 'Noto Kufi Arabic', 'Noto Sans Arabic', sans-serif;
-  --heading-weight: 700;
-  --radius-card: 18px;
-  --radius-control: 14px;
-  --radius-frame: 180px 180px 18px 18px / 120px 120px 18px 18px;
-  --frame-side: 1px;
-  --frame-pad-top: 64px;
-  --radius-frame-lg: 460px 460px 40px 40px / 320px 320px 40px 40px;
-  --frame-pad-top-lg: 190px;
 }
 
-[data-dir='bab'][data-theme='light'] {
-  --page: #e7e4de;
-  --live-glow: radial-gradient(70% 42% at 50% 40%, rgba(12, 111, 104, 0.10), rgba(12, 111, 104, 0) 72%);
-  --page-glow: none;
-  --surface: #f5f3ef;
-  --surface-raised: #ffffff;
-  --surface-sunken: #dcd8d0;
-  --hairline: #cfc9be;
-  --text: #1c1a17;
-  --text-body: #46413a;
-  --text-muted: #625c53;
-  --accent: #7a6850;
-  --cta: #0c6f68;
-  --cta-text: #ffffff;
-  --cta-hover: #095a54;
-  --sacred-quran: #1a1815;
-  --sacred-hadith: #1c1a17;
-  --sacred-frame: #cbc3b5;
-  --sacred-bg: #fbfaf7;
-  --success: #2c6e49;
-  --danger: #a63a2e;
-  --focus-ring: #0c6f68;
-  --overlay: rgba(28, 26, 23, 0.45);
-  --card-shadow: 0 1px 2px rgba(28, 26, 23, 0.06);
-  --raised-shadow: 0 18px 48px rgba(28, 26, 23, 0.18);
-  --theme-color: #e7e4de;
-  --font-ui: 'Noto Sans Arabic', system-ui, sans-serif;
-  --font-heading: 'Noto Kufi Arabic', 'Noto Sans Arabic', sans-serif;
-  --heading-weight: 700;
-  --radius-card: 18px;
-  --radius-control: 14px;
-  --radius-frame: 180px 180px 18px 18px / 120px 120px 18px 18px;
-  --frame-side: 1px;
-  --frame-pad-top: 64px;
-  --radius-frame-lg: 460px 460px 40px 40px / 320px 320px 40px 40px;
-  --frame-pad-top-lg: 190px;
-}
-
-/* ───────────────────────── حبر وورق: paper, ink, and the Arabic letter as the hero ───────────────────────── */
-[data-dir='hibr'][data-theme='dark'] {
-  --page: #0f0f0f;
-  --live-glow: none;
-  --page-glow: none;
-  --surface: #171717;
-  --surface-raised: #202020;
-  --surface-sunken: #0a0a0a;
-  --hairline: #2e2e2e;
-  --text: #f3f2ee;
-  --text-body: #cbcac5;
-  --text-muted: #a09f99;
-  --accent: #a3b9f0;
-  --cta: #f3f2ee;
-  --cta-text: #111111;
-  --cta-hover: #ffffff;
-  --sacred-quran: #faf9f5;
-  --sacred-hadith: #f3f2ee;
-  --sacred-frame: #3a3a3a;
-  --sacred-bg: transparent;
-  --success: #86d3ad;
-  --danger: #f2a0a0;
-  --focus-ring: #a3b9f0;
-  --overlay: rgba(0, 0, 0, 0.72);
-  --card-shadow: none;
-  --raised-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
-  --theme-color: #0f0f0f;
-  --font-ui: 'Noto Naskh Arabic', serif;
-  --font-heading: 'Aref Ruqaa', 'Noto Naskh Arabic', serif;
-  --heading-weight: 700;
-  --radius-card: 4px;
-  --radius-control: 4px;
-  --radius-frame: 0;
-  --frame-side: 0px;
-  --frame-pad-top: 20px;
-  --radius-frame-lg: 0;
-  --frame-pad-top-lg: 48px;
-}
-
-[data-dir='hibr'][data-theme='light'] {
-  --page: #f7f7f4;
-  --live-glow: none;
-  --page-glow: none;
-  --surface: #ffffff;
-  --surface-raised: #ffffff;
-  --surface-sunken: #efefeb;
-  --hairline: #dcdcd6;
-  --text: #121212;
-  --text-body: #3a3a3a;
-  --text-muted: #5c5c5c;
-  --accent: #1f3b7a;
-  --cta: #121212;
-  --cta-text: #ffffff;
-  --cta-hover: #2c2c2c;
-  --sacred-quran: #0a0a0a;
-  --sacred-hadith: #121212;
-  --sacred-frame: #d6d6d0;
-  --sacred-bg: transparent;
-  --success: #2c6e49;
-  --danger: #a63a2e;
-  --focus-ring: #1f3b7a;
-  --overlay: rgba(18, 18, 18, 0.45);
-  --card-shadow: none;
-  --raised-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
-  --theme-color: #f7f7f4;
-  --font-ui: 'Noto Naskh Arabic', serif;
-  --font-heading: 'Aref Ruqaa', 'Noto Naskh Arabic', serif;
-  --heading-weight: 700;
-  --radius-card: 4px;
-  --radius-control: 4px;
-  --radius-frame: 0;
-  --frame-side: 0px;
-  --frame-pad-top: 20px;
-  --radius-frame-lg: 0;
-  --frame-pad-top-lg: 48px;
-}
-
-/* Shared, not themed */
-[data-dir] {
-  --font-quran: 'KFGQPC HAFS', 'Noto Naskh Arabic', serif;
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+  }
 }

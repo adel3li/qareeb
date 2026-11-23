@@ -1,0 +1,40 @@
+<!-- @dsCard height=288 -->
+<style>
+  .cv { position: relative; width: 960px; height: 288px; overflow: hidden; background: var(--page); font-family: var(--font-heading); }
+  .cv svg { position: absolute; inset: 0; }
+  .wall { fill: var(--text); }
+  .light { fill: var(--cta); }
+  .stone { fill: var(--accent); }
+  .tint { fill: var(--sacred-frame); }
+  .ground { fill: var(--page); }
+  .head { rx: var(--frame-arch-x); ry: var(--frame-arch-y); }
+  .tile { rx: var(--radius-card); }
+  .cv-name { position: absolute; left: 40px; bottom: 30px; width: 400px; direction: rtl; text-align: right; }
+  .cv-name h1 { margin: 0; font-weight: 700; font-size: 112px; line-height: 1; color: var(--text); }
+  .cv-name p { margin: 14px 0 0; font-family: var(--font-ui); font-size: 14px; line-height: 1.6; color: var(--text-muted); }
+</style>
+<div class="cv">
+  <!--
+    blocks: wall = --text, 336×288 (x 624–960, bleeding top, right and bottom); stone = --accent, 120×160 (x 480–600); tint = --sacred-frame, 120×104; light = --cta, the door, 152 wide.
+    arrangement: one tall slab with satellites: the basalt wall holds the open door; stone and tint sit beside it like the courtyard.
+    pattern: a literal motif, the arch, "the arch frames only the dua": three arched windows cut from the stone, and the door itself; heads clamped from frame-arch-x × frame-arch-y to 3:2.
+    scales: radius-card on the free corners of the satellites; gaps of space-6 (24) and space-8 (32); door head from frame-arch-x / frame-arch-y.
+  -->
+  <svg viewBox="0 0 960 288" width="960" height="288" aria-hidden="true">
+    <rect class="wall" x="624" y="0" width="336" height="288"></rect>
+    <rect class="light head" x="716" y="72" width="152" height="102"></rect>
+    <rect class="light" x="716" y="123" width="152" height="165"></rect>
+    <rect class="tint tile" x="480" y="-24" width="120" height="128"></rect>
+    <rect class="stone tile" x="480" y="128" width="120" height="184"></rect>
+    <rect class="ground head" x="490" y="184" width="28" height="22"></rect>
+    <rect class="ground" x="490" y="195" width="28" height="93"></rect>
+    <rect class="ground head" x="526" y="184" width="28" height="22"></rect>
+    <rect class="ground" x="526" y="195" width="28" height="93"></rect>
+    <rect class="ground head" x="562" y="184" width="28" height="22"></rect>
+    <rect class="ground" x="562" y="195" width="28" height="93"></rect>
+  </svg>
+  <div class="cv-name">
+    <h1>قريب</h1>
+    <p>دعاءٌ واحد كلَّ يوم، من القرآن والسنة. الباب مفتوح.</p>
+  </div>
+</div>

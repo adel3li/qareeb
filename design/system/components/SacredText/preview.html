@@ -1,0 +1,20 @@
+<!-- @dsCard group="Sacred" height=520 subtitle="Qur'an in the Mushaf face · hadith in the UI face · both in the arch" -->
+<div class="q-demo" dir="rtl" lang="ar">
+  <figure class="q-arch">
+    <p class="q-quran" lang="ar" data-quran="1:6 1:7"></p>
+    <figcaption class="q-ref">سورة الفاتحة: ٦–٧</figcaption>
+  </figure>
+  <figure class="q-arch">
+    <p class="q-hadith" lang="ar" data-excerpt="muslim:2721"></p>
+    <figcaption class="q-ref">صحيح مسلم (٢٧٢١)</figcaption>
+  </figure>
+  <p class="q-note">The text is loaded from assets/Content/sacred.json, copied from its sources by script.</p>
+</div>
+<script>
+  fetch('../../assets/Content/sacred.json').then(function (r) { return r.json(); }).then(function (s) {
+    document.querySelectorAll('[data-quran]').forEach(function (el) {
+      el.textContent = '﴿' + el.dataset.quran.split(' ').map(function (k) { return s.quran[k]; }).join(' ') + '﴾';
+    });
+    document.querySelectorAll('[data-excerpt]').forEach(function (el) { el.textContent = '«' + s.excerpts[el.dataset.excerpt] + '»'; });
+  });
+</script>

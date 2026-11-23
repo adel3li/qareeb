@@ -1,0 +1,201 @@
+/* قريب: component styles for the design-system previews.
+   Every colour, radius, space and duration is a token from tokens.json (compiled to tokens.css).
+   The app builds the same components in React with Tailwind on the same tokens; this file is the reference. */
+
+/* ── Preview ground ─────────────────────────────────────────── */
+.q-demo { direction: rtl; font-family: var(--font-ui); color: var(--text); background: var(--page); padding: 16px; display: flex; flex-direction: column; gap: 14px; }
+.q-demo--row { flex-direction: row; flex-wrap: wrap; align-items: center; }
+.q-demo :focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.q-demo svg { flex-shrink: 0; }
+.q-note { margin: 0; font-size: 0.8125rem; line-height: 1.6; color: var(--text-muted); }
+
+/* ── Button ─────────────────────────────────────────────────── */
+.q-btn { box-sizing: border-box; min-height: var(--button-height); padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: var(--radius-control); font-family: inherit; font-size: 1.0625rem; line-height: 1.4; font-weight: 600; text-decoration: none; cursor: pointer; transition: background-color var(--duration-fast) var(--ease-standard); }
+.q-btn--block { display: flex; width: 100%; }
+.q-btn--primary { background: var(--cta); color: var(--cta-text); }
+.q-btn--primary:hover, .q-btn--primary:active { background: var(--cta-hover); }
+.q-btn--secondary { min-height: var(--button-height-sm); background: transparent; color: var(--text); border: 1px solid var(--hairline); font-size: 1rem; font-weight: 500; }
+.q-btn--secondary:active { background: var(--surface-sunken); }
+.q-btn--quiet { min-height: var(--touch-target); padding: 0 14px; background: transparent; color: var(--text-muted); font-size: 0.9375rem; font-weight: 400; }
+.q-btn--danger { min-height: var(--button-height-sm); background: transparent; color: var(--danger); border: 1px solid var(--hairline); font-size: 1rem; font-weight: 500; }
+.q-btn[aria-disabled='true'] { background: var(--surface-sunken); color: var(--text-muted); cursor: default; }
+.q-btn__meta { font-size: 0.8125rem; font-weight: 400; }
+
+/* ── Icon button ────────────────────────────────────────────── */
+.q-iconbtn { width: var(--touch-target); height: var(--touch-target); display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: var(--radius-pill); background: transparent; color: var(--text-muted); cursor: pointer; }
+.q-iconbtn:active { background: var(--surface-sunken); }
+.q-iconbtn[aria-pressed='true'] { color: var(--accent); }
+
+/* ── Chip ───────────────────────────────────────────────────── */
+.q-chip { display: inline-flex; align-items: center; padding: 3px 12px; border-radius: var(--radius-pill); background: var(--surface-sunken); color: var(--text-muted); font-size: 0.8125rem; line-height: 1.5; font-weight: 500; }
+.q-chip--accent { background: transparent; color: var(--accent); border: 1px solid var(--accent); padding: 2px 11px; }
+.q-chip--plain { background: transparent; border: 1px solid var(--hairline); padding: 1px 10px; }
+
+/* ── Card ───────────────────────────────────────────────────── */
+.q-card { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-card); box-shadow: var(--card-shadow); padding: 14px var(--card-padding) 20px; display: flex; flex-direction: column; gap: var(--stack); }
+.q-card__top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.q-card__chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.q-card__actions { display: flex; margin-inline-end: -10px; }
+.q-card__title { margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 1.5rem; line-height: 1.5; text-wrap: balance; }
+.q-card__hook { margin: 4px 0 0; font-size: 1rem; line-height: 1.75; color: var(--text-body); }
+.q-card__scene { margin: 0; font-size: 0.9375rem; line-height: 1.7; color: var(--text-body); }
+.q-card__scene b { color: var(--accent); font-weight: 600; }
+
+/* ── Sacred text and the arch ───────────────────────────────── */
+.q-arch { margin: 0; background: var(--sacred-bg); border: 1px solid var(--sacred-frame); border-radius: var(--frame-arch-x) var(--frame-arch-x) var(--radius-card) var(--radius-card) / var(--frame-arch-y) var(--frame-arch-y) var(--radius-card) var(--radius-card); padding: 64px 14px 18px; text-align: center; }
+.q-quran { margin: 0; font-family: var(--font-quran); font-size: 1.75rem; line-height: 2.05; color: var(--sacred-quran); }
+.q-quran--live { font-size: 2rem; }
+.q-hadith { margin: 0; font-family: var(--font-ui); font-size: 1.375rem; line-height: 2; font-weight: 500; color: var(--sacred-hadith); }
+.q-hadith-full { margin: 0; font-size: 1.0625rem; line-height: 2.05; color: var(--sacred-hadith); text-align: start; }
+.q-ref { margin-top: 8px; font-size: 0.875rem; line-height: 1.6; color: var(--text-muted); }
+
+/* ── Disclosure (collapsible section) ───────────────────────── */
+.q-sections { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-card); overflow: hidden; }
+.q-disclosure + .q-disclosure { border-top: 1px solid var(--hairline); }
+.q-disclosure__head { width: 100%; min-height: 54px; padding: 0 var(--card-padding); display: flex; align-items: center; justify-content: space-between; border: 0; background: transparent; color: var(--text); font-family: inherit; font-size: 1rem; font-weight: 500; cursor: pointer; }
+.q-disclosure__head svg { color: var(--text-muted); transition: transform var(--duration-fast) var(--ease-standard); }
+.q-disclosure__head[aria-expanded='true'] svg { transform: rotate(180deg); }
+.q-disclosure__body { padding: 0 var(--card-padding) 18px; display: flex; flex-direction: column; gap: 10px; }
+.q-disclosure__body p { margin: 0; font-size: 1rem; line-height: 1.85; color: var(--text-body); }
+.q-source { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 0.8125rem; line-height: 1.6; color: var(--text-muted); }
+.q-reflection { margin: 0; padding-inline-start: 14px; border-inline-start: 2px solid var(--accent); font-size: 1rem; line-height: 1.85; color: var(--text-body); }
+
+/* ── Status banner ──────────────────────────────────────────── */
+.q-banner { margin: 0; display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: var(--radius-control); background: var(--surface-sunken); color: var(--text); font-size: 0.9375rem; line-height: 1.6; font-weight: 500; }
+.q-banner svg { color: var(--success); }
+
+/* ── Empty state ────────────────────────────────────────────── */
+.q-empty { display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 32px 24px; text-align: center; }
+.q-empty__door { width: 92px; height: 118px; box-sizing: border-box; border: 1.5px solid var(--accent); border-radius: 46px 46px 6px 6px / 31px 31px 6px 6px; background-image: radial-gradient(70% 42% at 50% 40%, var(--glow), transparent 72%); }
+.q-empty__title { margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; line-height: 1.7; }
+.q-empty__body { margin: 0; font-size: 0.9375rem; line-height: 1.8; color: var(--text-body); }
+
+/* ── Top bar ────────────────────────────────────────────────── */
+.q-topbar { display: flex; align-items: center; justify-content: space-between; padding: 12px 8px 0; }
+.q-topbar__brand { height: 30px; margin-inline-start: 12px; display: block; }
+.q-topbar--back { justify-content: flex-start; gap: 4px; }
+.q-topbar__title { margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 1.375rem; line-height: 1.5; }
+.q-greeting { padding: 4px 20px 0; }
+.q-greeting p { margin: 0; line-height: 1.6; }
+.q-greeting__hello { font-size: 0.9375rem; color: var(--text-muted); }
+.q-greeting__date { font-size: 1.0625rem; font-weight: 500; }
+
+/* ── Tab bar ────────────────────────────────────────────────── */
+.q-tabbar { display: flex; background: var(--surface-raised); border-top: 1px solid var(--hairline); padding: 6px 8px 20px; }
+.q-tab { flex: 1; min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; font-weight: 600; }
+.q-tab__pill { width: 56px; height: 30px; border-radius: var(--radius-pill); display: flex; align-items: center; justify-content: center; }
+.q-tab[aria-current='page'] { color: var(--text); font-weight: 700; }
+.q-tab[aria-current='page'] .q-tab__pill { background: var(--surface-sunken); }
+
+/* ── Progress dots ──────────────────────────────────────────── */
+.q-dots { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 6px; }
+.q-dot { width: 6px; height: 6px; border-radius: var(--radius-pill); background: var(--hairline); }
+.q-dot--done { background: var(--accent); }
+.q-dot--current { width: 22px; background: var(--accent); }
+
+/* ── Segmented control ──────────────────────────────────────── */
+.q-seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px; padding: 4px; border-radius: var(--radius-control); background: var(--surface-sunken); }
+.q-seg__opt { min-height: 40px; border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--text-muted); font-family: inherit; font-size: 0.9375rem; font-weight: 600; cursor: pointer; }
+.q-seg__opt[aria-checked='true'], .q-seg__opt[aria-selected='true'] { background: var(--surface); color: var(--text); box-shadow: var(--card-shadow); }
+
+/* ── Switch ─────────────────────────────────────────────────── */
+.q-switch { min-height: var(--touch-target); display: inline-flex; align-items: center; gap: 10px; border: 0; background: transparent; color: var(--text-body); font-family: inherit; font-size: 0.875rem; cursor: pointer; padding: 0; }
+.q-switch__track { width: 44px; height: 26px; box-sizing: border-box; border-radius: var(--radius-pill); background: var(--surface-sunken); border: 1px solid var(--hairline); display: flex; align-items: center; padding: 2px; transition: background-color var(--duration-fast) var(--ease-standard); }
+.q-switch__knob { width: 20px; height: 20px; border-radius: var(--radius-pill); background: var(--text-muted); transition: transform var(--duration-fast) var(--ease-standard); }
+.q-switch[aria-checked='true'] .q-switch__track { background: var(--cta); border-color: var(--cta); }
+.q-switch[aria-checked='true'] .q-switch__knob { background: var(--cta-text); transform: translateX(-18px); }
+
+/* ── Text fields ────────────────────────────────────────────── */
+.q-field { display: flex; flex-direction: column; gap: 6px; }
+.q-field__label { font-size: 0.875rem; line-height: 1.6; font-weight: 500; color: var(--text); }
+.q-input, .q-textarea { box-sizing: border-box; width: 100%; border-radius: var(--radius-control); border: 1px solid var(--hairline); background: var(--surface-sunken); color: var(--text); font-family: inherit; font-size: 1rem; line-height: 1.8; }
+.q-input { min-height: 48px; padding: 0 14px; }
+.q-textarea { min-height: 150px; padding: 14px 16px; resize: none; }
+.q-input::placeholder, .q-textarea::placeholder { color: var(--text-muted); }
+.q-search { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 14px; border-radius: var(--radius-control); background: var(--surface-sunken); color: var(--text-muted); }
+.q-search input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--text); font-family: inherit; font-size: 1rem; }
+.q-search input::placeholder { color: var(--text-muted); }
+.q-hint { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; line-height: 1.6; color: var(--text-muted); }
+
+/* ── Text-size stepper ──────────────────────────────────────── */
+.q-stepper { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.q-stepper__ctrl { display: flex; align-items: center; gap: 6px; }
+.q-stepper__btn { width: var(--touch-target); height: var(--touch-target); border-radius: var(--radius-control); border: 1px solid var(--hairline); background: transparent; color: var(--text); font-family: inherit; font-size: 1.25rem; cursor: pointer; }
+.q-stepper__value { width: 56px; height: var(--touch-target); box-sizing: border-box; text-align: center; border-radius: var(--radius-control); border: 1px solid var(--hairline); background: var(--surface-sunken); color: var(--text); font-family: inherit; font-size: 1rem; }
+
+/* ── Choice grid ────────────────────────────────────────────── */
+.q-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.q-choice { min-height: 64px; border-radius: var(--radius-control); border: 1px solid var(--hairline); background: var(--surface); color: var(--text); font-family: inherit; font-size: 1rem; font-weight: 500; cursor: pointer; }
+.q-choice[aria-pressed='true'] { border: 2px solid var(--cta); }
+
+/* ── List rows ──────────────────────────────────────────────── */
+.q-list { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-card); overflow: hidden; }
+.q-list > li + li { border-top: 1px solid var(--hairline); }
+.q-row { display: flex; align-items: center; gap: 12px; min-height: 72px; padding: 10px var(--card-padding); color: var(--text); text-decoration: none; }
+.q-row--compact { min-height: 56px; }
+.q-row__main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.q-row__title { font-size: 1.0625rem; line-height: 1.6; font-weight: 600; }
+.q-row__meta { font-size: 0.8125rem; line-height: 1.6; color: var(--text-muted); }
+.q-row__end { color: var(--text-muted); }
+.q-row--danger { color: var(--danger); }
+.q-section-label { margin: 0 4px 8px; font-size: 0.8125rem; line-height: 1.6; font-weight: 600; color: var(--accent); }
+
+/* ── Notebook entry ─────────────────────────────────────────── */
+.q-entry { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-card); padding: 12px var(--card-padding) 6px; display: flex; flex-direction: column; gap: 6px; }
+.q-entry__dua { margin: 0; font-size: 0.8125rem; line-height: 1.6; font-weight: 600; color: var(--accent); }
+.q-entry__text { margin: 0; font-size: 1rem; line-height: 1.85; color: var(--text); }
+.q-entry__foot { display: flex; align-items: center; justify-content: space-between; font-size: 0.8125rem; color: var(--text-muted); }
+.q-day-label { margin: 4px 4px 0; font-size: 0.8125rem; line-height: 1.6; font-weight: 600; color: var(--text-muted); }
+
+/* ── Hijri calendar ─────────────────────────────────────────── */
+.q-cal { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-card); padding: 8px 8px 12px; }
+.q-cal__head { display: flex; align-items: center; justify-content: space-between; }
+.q-cal__month { margin: 0; font-size: 1.0625rem; line-height: 1.6; font-weight: 600; }
+.q-cal__grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); row-gap: 4px; margin-top: 4px; }
+.q-cal__wd { text-align: center; font-size: 0.75rem; line-height: 2; font-weight: 500; color: var(--text-muted); }
+.q-cal__cell { display: flex; justify-content: center; }
+.q-day { width: var(--touch-target); height: var(--touch-target); box-sizing: border-box; padding: 0; border-radius: var(--radius-pill); border: 1px solid transparent; background: transparent; color: var(--text); font-family: inherit; font-size: 0.9375rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; cursor: pointer; }
+.q-day::after { content: ''; width: 4px; height: 4px; border-radius: var(--radius-pill); background: transparent; }
+.q-day--lived { background: var(--surface-sunken); font-weight: 600; }
+.q-day--lived::after { background: var(--cta); }
+.q-day--today { border: 1px dashed var(--accent); font-weight: 600; }
+.q-day--future { color: var(--text-muted); }
+.q-day[aria-pressed='true'] { border: 2px solid var(--text); }
+
+/* ── Sheet ──────────────────────────────────────────────────── */
+.q-scrim { position: relative; background: var(--overlay); padding-top: 120px; }
+.q-sheet { background: var(--surface-raised); border-radius: var(--radius-sheet) var(--radius-sheet) 0 0; box-shadow: var(--raised-shadow); padding: 8px 20px 28px; display: flex; flex-direction: column; gap: 16px; }
+.q-sheet__grip { align-self: center; width: 40px; height: 4px; border-radius: var(--radius-pill); background: var(--hairline); }
+.q-sheet__head { display: flex; align-items: center; justify-content: space-between; }
+.q-sheet__title { margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; line-height: 1.7; }
+
+/* ── Paced text (the guided experience) ─────────────────────── */
+.q-live { background-color: var(--page); background-image: radial-gradient(70% 42% at 50% 40%, var(--glow), transparent 72%); padding: 4px 24px 20px; display: flex; flex-direction: column; gap: 16px; }
+.q-live__step { margin: 0; text-align: center; font-size: 0.875rem; line-height: 1.6; font-weight: 600; color: var(--accent); }
+.q-live__frame { min-height: 360px; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid var(--sacred-frame); border-radius: var(--frame-arch-x) var(--frame-arch-x) var(--radius-card) var(--radius-card) / var(--frame-arch-y) var(--frame-arch-y) var(--radius-card) var(--radius-card); padding: 64px 22px 32px; }
+.q-live__lines { display: flex; flex-direction: column; gap: 14px; text-align: center; }
+.q-live__line { margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 1.375rem; line-height: 1.85; color: var(--text); animation: q-fade var(--duration-base) var(--ease-standard); }
+@keyframes q-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .q-live__line { animation: none; } }
+
+/* ── Share card (1080px images, shown scaled) ───────────────── */
+.q-share { width: 1080px; height: 1350px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px; padding: 88px 96px; background-color: var(--page); background-image: radial-gradient(70% 42% at 50% 40%, var(--glow), transparent 72%); color: var(--text); font-family: var(--font-ui); direction: rtl; }
+.q-share__kind { align-self: flex-start; font-size: 32px; line-height: 1.5; font-weight: 500; color: var(--text-muted); background: var(--surface-sunken); border-radius: var(--radius-pill); padding: 6px 26px; }
+.q-share__title { margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 64px; line-height: 1.45; }
+.q-share__arch { margin: 0; flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: var(--sacred-bg); border: 3px solid var(--sacred-frame); border-radius: var(--frame-arch-x-lg) var(--frame-arch-x-lg) 40px 40px / var(--frame-arch-y-lg) var(--frame-arch-y-lg) 40px 40px; padding: 190px 56px 56px; }
+.q-share__quran { margin: 0; font-family: var(--font-quran); font-size: 84px; line-height: 2.05; color: var(--sacred-quran); }
+.q-share__ref { margin-top: 20px; font-size: 34px; line-height: 1.6; color: var(--text-muted); }
+.q-share__scene { margin: 0; font-size: 38px; line-height: 1.7; color: var(--text-body); }
+.q-share__scene b { color: var(--accent); font-weight: 600; }
+.q-share__foot { display: flex; align-items: center; justify-content: space-between; border-top: 2px solid var(--hairline); padding-top: 32px; }
+.q-share__logo { height: 76px; display: block; }
+.q-share__tag { font-size: 30px; line-height: 1.5; color: var(--text-muted); }
+
+/* ── Logo files per theme (an <img> cannot follow currentColor) ── */
+[data-theme='dark'] .q-on-light { display: none; }
+:root:not([data-theme='dark']) .q-on-dark { display: none; }
+
+/* ── Row as a button (settings actions) ─────────────────────── */
+.q-rowbtn { box-sizing: border-box; width: 100%; min-height: 56px; padding: 0 var(--card-padding); display: flex; align-items: center; gap: 12px; border: 0; background: transparent; color: var(--text); font-family: inherit; font-size: 1rem; text-align: start; cursor: pointer; }
+.q-rowbtn svg { color: var(--text-muted); }
+.q-rowbtn--danger, .q-rowbtn--danger svg { color: var(--danger); }

@@ -1,0 +1,22 @@
+<!-- @dsCard group="Brand" height=560 width=1080 subtitle="the 4:5 share image (1080×1350) with the scene line" -->
+<div style="background: var(--page);">
+  <div class="q-share" lang="ar">
+    <span class="q-share__kind">من القرآن</span>
+    <p class="q-share__title">دعاء يونس في الظلمات</p>
+    <figure class="q-share__arch">
+      <p class="q-share__quran" data-excerpt="21:87"></p>
+      <figcaption class="q-share__ref">سورة الأنبياء: ٨٧</figcaption>
+    </figure>
+    <p class="q-share__scene"><b>الموقف · </b>دعا به يونس عليه السلام في بطن الحوت</p>
+    <div class="q-share__foot">
+      <img class="q-share__logo q-on-light" src="/_blob/094569d2d4ac1107cc851247414834ea" alt="قريب">
+      <img class="q-share__logo q-on-dark" src="/_blob/0c6afae9b7553bba8de887bf50e9d3af" alt="قريب">
+      <span class="q-share__tag">دعاءٌ واحد كلَّ يوم</span>
+    </div>
+  </div>
+</div>
+<script>
+  fetch('../../assets/Content/sacred.json').then(function (r) { return r.json(); }).then(function (s) {
+    document.querySelectorAll('[data-excerpt]').forEach(function (el) { el.textContent = '﴿' + s.excerpts[el.dataset.excerpt] + '﴾'; });
+  });
+</script>

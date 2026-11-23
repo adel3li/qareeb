@@ -136,6 +136,20 @@ def icon(shape='rounded', sw=48, spill=True, scale=1.0):
     return svg('0 0 1024 1024', bg + door_mark(STONE_D, sw, TQ_D, 0.9, spill, scale), 'قريب', 1024, 1024)
 
 
+def splash(theme):
+    """Startup screen of the installed app (iOS), 1179x2556: the door with its light, the word under it."""
+    W, H = 1179, 2556
+    bg, ink, door, light, op = {'light': (PAGE_L, INK, STONE_L, TQ_L, 0.45), 'dark': (BASALT, SAND, STONE_D, TQ_D, 0.9)}[theme]
+    s = 0.62                                   # door mark scale (1024 grid -> ~380px wide)
+    mark = f'<g transform="translate({W / 2 - 512 * s:g} {H * 0.36 - 520 * s:g}) scale({s})">{door_mark(door, 48, light, op, True, gid="s")}</g>'
+    ws = 0.16                                  # wordmark scale
+    ww = (WX1 - WX0) * ws
+    word = f'<path fill="{ink}" transform="translate({W / 2 - ww / 2 - WX0 * ws:g} {H * 0.36 + 300 * s + 360:g}) scale({ws})" d="{WORD}"/>'
+    return svg(f'0 0 {W} {H}', f'<rect width="{W}" height="{H}" fill="{bg}"/>{mark}{word}', 'قريب', W, H)
+
+
+PAGE_L = '#e7e4de'                              # --page, light
+
 FILES = {
     'wordmark.svg': wordmark('currentColor'),
     'wordmark-on-light.svg': wordmark(INK),
@@ -148,6 +162,10 @@ FILES = {
     'icon-full.svg': icon('square'),                      # apple-touch-icon: iOS rounds the corners itself
     'icon-maskable.svg': icon('square', scale=0.78),      # mark inside the 80% safe circle
     'favicon.svg': icon('rounded', sw=80, spill=False),   # heavier line for 16 to 32 px
+    'mark-on-light.svg': svg('200 200 624 650', door_mark(STONE_L, 48, TQ_L, 0.45, gid='m'), 'قريب'),
+    'mark-on-dark.svg': svg('200 200 624 650', door_mark(STONE_D, 48, TQ_D, 0.9, gid='m'), 'قريب'),
+    'splash-light.svg': splash('light'),
+    'splash-dark.svg': splash('dark'),
 }
 
 for name, text in FILES.items():

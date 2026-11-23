@@ -1,0 +1,1 @@
+`splash-light` and `splash-dark`: iOS startup images (1179×2556 PNG, SVG masters for other sizes), on `page` of each theme, the door with its light and the word under it. `og-image-1200x630`: the link preview, the lockup on basalt with the line «دعاءٌ واحد كلَّ يوم، من القرآن والسنة».
