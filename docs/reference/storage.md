@@ -40,6 +40,10 @@ Day keys come from `src/lib/dates.ts` (`toLocalDateString`), never from `toISOSt
 
 Export and import are symmetric: every key above is exported and imported. Import rejects files over 5 MB, unknown fields at any level, records that fail their shape, and two completions on one day; it shows a summary (days, entries, needs, favourites, export date) and replaces data only after «استبدل بياناتي». Files from before `onboarding`, `welcome` and `drafts` were exported are accepted without them.
 
+## Session storage
+
+`qareeb-ui:notebook-view` in `sessionStorage` remembers which notebook view («ما وجدته» or «دعواتي») was open, for this tab only. It is a convenience, written when the user switches view, gone when the tab closes, and not part of the backup.
+
 ## Erase
 
 «امسح كل بياناتي» resets every store and removes every key starting with `qareeb:`; other sites' keys are untouched.

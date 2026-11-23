@@ -6,6 +6,10 @@ import { useUi } from '../state/ui';
 import { TabBar, WideHeader } from './Navigation';
 import { tabOf, useRoute, type Route } from './router';
 import { useAppearance } from './useAppearance';
+import { loadContent } from '../content/load';
+
+// Start loading the content chunk at once, in parallel with the first screen.
+void loadContent().catch(() => {});
 
 const Onboarding = lazy(() => import('../screens/onboarding/OnboardingScreen'));
 const Today = lazy(() => import('../screens/today/TodayScreen'));
