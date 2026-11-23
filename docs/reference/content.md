@@ -107,10 +107,13 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0060` | Sunnah, Muslim 2202 (excerpt proposed) | pending_verification |
 | `dua_0061` | Qur'an, al-Naml 19 (whole range; excerpt proposed) | verified |
 | `dua_0062` | Qur'an, al-Qasas 16 (whole range; excerpt proposed) | verified |
+| `dua_0063` | Sunnah, Bukhari 5743 (excerpt proposed) | pending_verification |
 | `dua_0064` | Qur'an, al-Qasas 21 (whole range; excerpt proposed) | verified |
 | `dua_0065` | Qur'an, al-Qasas 22 (whole range; excerpt proposed) | verified |
+| `dua_0066` | Sunnah, Bukhari 3020 (excerpt proposed) | pending_verification |
 | `dua_0067` | Qur'an, al-Qasas 24 (whole range; excerpt proposed) | verified |
 | `dua_0068` | Qur'an, al-Saffat 100 (whole range; excerpt proposed) | verified |
+| `dua_0069` | Sunnah, Muslim 2739 (excerpt proposed) | pending_verification |
 | `dua_0070` | Qur'an, al-Ahqaf 15 (whole range; excerpt proposed) | verified |
 | `dua_0071` | Qur'an, al-Qamar 10 (whole range; excerpt proposed) | verified |
 | `dua_0072` | Qur'an, al-Hashr 10 (whole range; excerpt proposed) | verified |
