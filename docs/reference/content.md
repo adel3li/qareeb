@@ -72,6 +72,9 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0035` | Qur'an, Ibrahim 35 (whole range; excerpt proposed) | verified |
 | `dua_0037` | Qur'an, Ibrahim 37 (whole range; excerpt proposed) | verified |
 | `dua_0038` | Qur'an, Ibrahim 40–41 (whole range; excerpt proposed) | verified |
+| `dua_0040` | Qur'an, al-Isra' 24 (whole range; excerpt proposed) | verified |
+| `dua_0041` | Qur'an, al-Isra' 80 (whole range; excerpt proposed) | verified |
+| `dua_0043` | Qur'an, al-Kahf 10 (whole range; excerpt proposed) | verified |
 | `dua_0044` | Qur'an, Maryam 4 (whole range; excerpt proposed) | verified |
 | `dua_0046` | Qur'an, Ta-Ha 25–28 (whole range; excerpt proposed) | verified |
 | `dua_0047` | Qur'an, Ta-Ha 114 (whole range; excerpt proposed) | verified |
