@@ -95,12 +95,16 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0048` | Sunnah, Muslim 2491 (excerpt proposed) | pending_verification |
 | `dua_0049` | Qur'an, al-Anbiya' 83 (whole range; excerpt proposed) | verified |
 | `dua_0050` | Qur'an, al-Anbiya' 89 (whole range; excerpt proposed) | verified |
+| `dua_0051` | Sunnah, Bukhari 3477 (excerpt proposed) | pending_verification |
 | `dua_0052` | Qur'an, al-Mu'minun 29 (whole range; excerpt proposed) | verified |
 | `dua_0053` | Qur'an, al-Mu'minun 97–98 (whole range; excerpt proposed) | verified |
+| `dua_0054` | Sunnah, Muslim 1763 (excerpt proposed) | pending_verification |
 | `dua_0055` | Qur'an, al-Mu'minun 118 (whole range; excerpt proposed) | verified |
 | `dua_0056` | Qur'an, al-Furqan 74 (whole range; excerpt proposed) | verified |
+| `dua_0057` | Sunnah, Bukhari 2933 (excerpt proposed) | pending_verification |
 | `dua_0058` | Qur'an, al-Shu'ara' 83–85 (whole range; excerpt proposed) | verified |
 | `dua_0059` | Qur'an, al-Shu'ara' 169 (whole range; excerpt proposed) | verified |
+| `dua_0060` | Sunnah, Muslim 2202 (excerpt proposed) | pending_verification |
 | `dua_0061` | Qur'an, al-Naml 19 (whole range; excerpt proposed) | verified |
 | `dua_0062` | Qur'an, al-Qasas 16 (whole range; excerpt proposed) | verified |
 | `dua_0064` | Qur'an, al-Qasas 21 (whole range; excerpt proposed) | verified |
