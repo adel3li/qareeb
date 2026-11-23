@@ -53,3 +53,7 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0020` | Qur'an, Al Imran 191–194 (whole range; excerpt proposed) | verified |
 | `dua_0022` | Qur'an, al-A'raf 23 (whole range; excerpt proposed) | verified |
 | `dua_0023` | Qur'an, al-A'raf 89 (whole range; excerpt proposed) | verified |
+| `dua_0025` | Qur'an, al-A'raf 126 (whole range; excerpt proposed) | verified |
+| `dua_0026` | Qur'an, al-A'raf 151 (whole range; excerpt proposed) | verified |
+| `dua_0028` | Qur'an, Yunus 85–86 (whole range; excerpt proposed) | verified |
+| `dua_0029` | Qur'an, Hud 47 (whole range; excerpt proposed) | verified |
