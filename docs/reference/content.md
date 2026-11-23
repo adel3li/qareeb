@@ -62,12 +62,16 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0015` | Sunnah, Muslim 2725 (excerpt proposed) | pending_verification |
 | `dua_0016` | Qur'an, Al Imran 38 (whole range; excerpt proposed) | verified |
 | `dua_0017` | Qur'an, Al Imran 147 (whole range; excerpt proposed) | verified |
+| `dua_0018` | Sunnah, Bukhari 143 (excerpt proposed) | pending_verification |
 | `dua_0019` | Qur'an, Al Imran 173 (whole range; excerpt proposed) | verified |
 | `dua_0020` | Qur'an, Al Imran 191–194 (whole range; excerpt proposed) | verified |
+| `dua_0021` | Sunnah, Bukhari 6334 (excerpt proposed) | pending_verification |
 | `dua_0022` | Qur'an, al-A'raf 23 (whole range; excerpt proposed) | verified |
 | `dua_0023` | Qur'an, al-A'raf 89 (whole range; excerpt proposed) | verified |
+| `dua_0024` | Sunnah, Muslim 2697 (excerpt proposed) | pending_verification |
 | `dua_0025` | Qur'an, al-A'raf 126 (whole range; excerpt proposed) | verified |
 | `dua_0026` | Qur'an, al-A'raf 151 (whole range; excerpt proposed) | verified |
+| `dua_0027` | Sunnah, Muslim 2721 (excerpt proposed) | pending_verification |
 | `dua_0028` | Qur'an, Yunus 85–86 (whole range; excerpt proposed) | verified |
 | `dua_0029` | Qur'an, Hud 47 (whole range; excerpt proposed) | verified |
 | `dua_0031` | Qur'an, Yusuf 33 (whole range; excerpt proposed) | verified |
