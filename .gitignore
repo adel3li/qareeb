@@ -1,0 +1,9 @@
+*.local
+.DS_Store
+dist
+dist-*
+dist-landing
+node_modules
+playwright-report
+src/content/generated/
+test-results

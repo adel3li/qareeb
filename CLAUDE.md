@@ -21,7 +21,13 @@ bun run validate-content  # schema, sacred-text and review checks on content/dua
 bun run check-promises    # product promises as code checks
 bun run build             # production build: content at CONTENT_MIN_LEVEL or above (verified, by the owner's decision)
 CONTENT_PREVIEW=1 bun run build   # preview build: drafts included, marked
+bun run fetch-quran       # copy verses into the cards by surah and ayah
+bun run fetch-hadith      # copy narrations into the cards by collection and number
+bun run render-splash     # iOS startup images from design/brand
+bun run build-landing     # the static landing page into dist-landing/
 ```
+
+`bun run dev` runs with `CONTENT_PREVIEW=1`. The production build stops while fewer than 30 cards reach `verified` (CI's "production content gate" job shows it). `docs/reference/decisions-open.md` lists the open decisions and the line that changes each.
 
 ## Rules that are easy to break
 

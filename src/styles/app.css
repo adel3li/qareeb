@@ -1,0 +1,172 @@
+@import 'tailwindcss' source('../');
+@import './tokens.css';
+
+/*
+ * Tailwind reads the design tokens (tokens.css, generated from design/system/tokens.json).
+ * Colours are --color-* pointing at the semantic variables; type styles are under --text-t-*
+ * so they never collide with the colour variables --text, --text-body and --text-muted.
+ * The default palette is removed: a component can only use a token.
+ */
+@theme {
+  --color-*: initial;
+  --font-*: initial;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-hairline: var(--hairline);
+  --color-text: var(--text);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-cta: var(--cta);
+  --color-cta-text: var(--cta-text);
+  --color-cta-hover: var(--cta-hover);
+  --color-sacred-quran: var(--sacred-quran);
+  --color-sacred-hadith: var(--sacred-hadith);
+  --color-sacred-frame: var(--sacred-frame);
+  --color-sacred-bg: var(--sacred-bg);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-focus-ring: var(--focus-ring);
+  --color-overlay: var(--overlay);
+  --color-glow: var(--glow);
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --font-q-ui: var(--font-ui);
+  --font-q-heading: var(--font-heading);
+  --font-q-quran: var(--font-quran);
+
+  --text-t-display: var(--fs-display);
+  --text-t-display--line-height: var(--lh-display);
+  --text-t-display--font-weight: var(--fw-display);
+  --text-t-title: var(--fs-title);
+  --text-t-title--line-height: var(--lh-title);
+  --text-t-title--font-weight: var(--fw-title);
+  --text-t-live: var(--fs-live);
+  --text-t-live--line-height: var(--lh-live);
+  --text-t-live--font-weight: var(--fw-live);
+  --text-t-subtitle: var(--fs-subtitle);
+  --text-t-subtitle--line-height: var(--lh-subtitle);
+  --text-t-subtitle--font-weight: var(--fw-subtitle);
+  --text-t-body-lg: var(--fs-body-lg);
+  --text-t-body-lg--line-height: var(--lh-body-lg);
+  --text-t-body: var(--fs-body);
+  --text-t-body--line-height: var(--lh-body);
+  --text-t-body-sm: var(--fs-body-sm);
+  --text-t-body-sm--line-height: var(--lh-body-sm);
+  --text-t-label: var(--fs-label);
+  --text-t-label--line-height: var(--lh-label);
+  --text-t-label--font-weight: var(--fw-label);
+  --text-t-caption: var(--fs-caption);
+  --text-t-caption--line-height: var(--lh-caption);
+  --text-t-caption--font-weight: var(--fw-caption);
+  --text-t-tab: var(--fs-tab);
+  --text-t-tab--line-height: var(--lh-tab);
+  --text-t-tab--font-weight: var(--fw-tab);
+  --text-t-button: var(--fs-button);
+  --text-t-button--line-height: var(--lh-button);
+  --text-t-button--font-weight: var(--fw-button);
+  --text-t-quran: var(--fs-quran);
+  --text-t-quran--line-height: var(--lh-quran);
+  --text-t-quran-live: var(--fs-quran-live);
+  --text-t-quran-live--line-height: var(--lh-quran-live);
+  --text-t-hadith: var(--fs-hadith);
+  --text-t-hadith--line-height: var(--lh-hadith);
+  --text-t-hadith--font-weight: var(--fw-hadith);
+  --text-t-hadith-full: var(--fs-hadith-full);
+  --text-t-hadith-full--line-height: var(--lh-hadith-full);
+
+  --breakpoint-wide: 48rem;
+}
+
+/* The arch that frames sacred text and the guided experience (never a button, card or photo). */
+@utility arch {
+  border-radius: var(--frame-arch-x) var(--frame-arch-x) var(--radius-card) var(--radius-card) /
+    var(--frame-arch-y) var(--frame-arch-y) var(--radius-card) var(--radius-card);
+}
+
+/* The light inside the door: behind the guided experience, the closing screen and the door only. */
+@utility glow {
+  background-image: radial-gradient(70% 42% at 50% 40%, var(--glow), transparent 72%);
+}
+
+@utility fade-in {
+  animation: q-fade var(--duration-base) var(--ease-standard);
+}
+
+@keyframes q-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--text);
+    font-family: var(--font-ui);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    -webkit-tap-highlight-color: transparent;
+  }
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+  }
+}
+
+/* Sheets rise from the bottom; with reduced motion they simply appear (durations are 0). */
+.q-sheet {
+  animation: q-rise var(--duration-slow) var(--ease-standard);
+}
+
+@keyframes q-rise {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .q-sheet {
+    animation: none;
+  }
+}
