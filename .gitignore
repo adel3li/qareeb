@@ -1,8 +1,9 @@
-node_modules
-dist
-dist-*
-src/content/generated/
-test-results
-playwright-report
 *.local
 .DS_Store
+dist
+dist-*
+dist-landing
+node_modules
+playwright-report
+src/content/generated/
+test-results

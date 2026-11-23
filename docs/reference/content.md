@@ -48,12 +48,12 @@ The excerpt of a verse or narration that is the dua (`text`) is the reviewer's d
 
 `counts` in the built file holds how many cards reached each status, read from the data; «عن المحتوى» shows those numbers.
 
-While no card is `verified`, the production build stops (CI's "production content gate" job is expected to fail and does not block the other checks), and a dev server without `CONTENT_PREVIEW=1` has no cards. Run `CONTENT_PREVIEW=1 bun run dev` to work with the drafts.
+While no card is `verified`, the production build stops (CI's "production content gate" job is expected to fail and does not block the other checks). `bun run dev` runs with `CONTENT_PREVIEW=1`, so the drafts are there while developing.
 
 ## How drafts display in preview builds
 
 - A «مسودة» chip on the card.
-- When a draft's `text` is still a placeholder, the app shows the **full copied verse or narration** (`quran.fullText` or `hadith.fullNarration`) inside `SacredText`, with a visible «مسودة» note saying the excerpt is not chosen yet. It never shows a cut it chose itself.
+- When a draft's `text` is still a placeholder: a Qur'an card shows the **whole copied verse(s)** (`quran.fullText`) inside `SacredText`, with a visible «مسودة» note saying the excerpt is not chosen yet; a hadith card shows the placeholder itself in the warning colour inside the arch (not as sacred text), with a note pointing to «نص الحديث كاملًا», where the full copied narration is. The app never shows a cut it chose itself (`displayTextOf` in `src/lib/reference.ts`). Share images follow the same rule.
 - Any other placeholder (`<<…>>`, `[[…]]`) in a field is shown as is, in a warning style, so it cannot be mistaken for content.
 - Authored text in the three draft cards begins with «[نص تجريبي]».
 
