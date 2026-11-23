@@ -45,7 +45,6 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 
 Qur'an cards from `dua_0004` on show the whole verse range as `text` (`excerptApproved: false`); the proposed excerpt is a word range in `review.notes`. Sunnah cards from `dua_0006` on keep `text` and glossary terms as placeholders until the reviewer picks the word range proposed in `review.notes`; they stay `pending_verification` and appear only in a preview build. `order` equals the id number: two Qur'an cards, then one Sunnah card.
 
-
 | Id | Kind | Status |
 |---|---|---|
 | `dua_0001` | Qur'an, al-Fatiha 6–7 (welcome dua) | verified |
