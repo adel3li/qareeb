@@ -74,10 +74,13 @@ The model and the review process are in `docs/handoff/03-content-model.md`; this
 | `dua_0027` | Sunnah, Muslim 2721 (excerpt proposed) | pending_verification |
 | `dua_0028` | Qur'an, Yunus 85–86 (whole range; excerpt proposed) | verified |
 | `dua_0029` | Qur'an, Hud 47 (whole range; excerpt proposed) | verified |
+| `dua_0030` | Sunnah, Bukhari 2893 (excerpt proposed) | pending_verification |
 | `dua_0031` | Qur'an, Yusuf 33 (whole range; excerpt proposed) | verified |
 | `dua_0032` | Qur'an, Yusuf 86 (whole range; excerpt proposed) | verified |
+| `dua_0033` | Sunnah, Bukhari 6346 (excerpt proposed) | pending_verification |
 | `dua_0034` | Qur'an, Yusuf 101 (whole range; excerpt proposed) | verified |
 | `dua_0035` | Qur'an, Ibrahim 35 (whole range; excerpt proposed) | verified |
+| `dua_0036` | Sunnah, Bukhari 6382 (excerpt proposed) | pending_verification |
 | `dua_0037` | Qur'an, Ibrahim 37 (whole range; excerpt proposed) | verified |
 | `dua_0038` | Qur'an, Ibrahim 40–41 (whole range; excerpt proposed) | verified |
 | `dua_0040` | Qur'an, al-Isra' 24 (whole range; excerpt proposed) | verified |
