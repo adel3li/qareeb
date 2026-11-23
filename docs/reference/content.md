@@ -124,3 +124,6 @@ Qur'an cards from `dua_0004` on show the whole verse range as `text` (`excerptAp
 | `dua_0075` | Qur'an, Nuh 28 (whole range shown; excerpt in notes) | verified |
 | `dua_0076` | Qur'an, al-Tahrim 8 (whole range shown; excerpt in notes) | verified |
 | `dua_0077` | Qur'an, al-Furqan 65–66 (whole range shown; excerpt in notes) | verified |
+| `dua_0091` | Qur'an, 29 30 (whole range shown; excerpt in notes) | verified |
+| `dua_0093` | Qur'an, 38 35 (whole range shown; excerpt in notes) | verified |
+| `dua_0095` | Qur'an, 40 7–9 (whole range shown; excerpt in notes) | verified |
