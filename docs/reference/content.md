@@ -22,6 +22,8 @@ Fields added to the blueprint's model: `hadith.collectionId` (`bukhari` or `musl
 | `bun run fetch-quran [ids]` | `scripts/fetch-quran.ts` | Fills `quran.fullText` from `quran-qpc-hafs.json` by surah and `ayahFrom..ayahTo` (verses joined by one space; each ends with its number, drawn inside the end-of-verse mark by the font) and sets `quran.edition`. Compares the letters with Tanzil Uthmani and warns on a difference. Checks that `text` is a verbatim part of the verses. **Never writes `text`** |
 | `bun run fetch-hadith [ids]` | `scripts/fetch-hadith.ts` | For `bukhari` and `muslim` only (`decide()` in `src/lib/hadithGrade.ts`), fills `hadith.fullNarration` from the open sunnah.com dataset by the collection's number (the first narration under that number), `hadith.gradings` as recorded, and `hadith.sourceUrl` (the sunnah.com page by its in-book reference). Refuses a narration with a corrupted character: it must be copied from a second source by hand. **Never writes `text`** |
 | `bun run validate-content` | `scripts/validate-content.ts` | Every check of `03` §7 (below). Exit 1 on any error |
+| `bun scripts/apply-card.ts <spec.json>…` | `scripts/apply-card.ts` | Applies an edit spec to a card: `textWords` and glossary `words` are word positions in `quran.fullText` / `hadith.fullNarration`, and the words are copied from there (never typed); `set` replaces other fields and refuses `text`, `quran` and `hadith.fullNarration`. The card is schema-checked before it is written. Specs used so far are kept in `content/edits/` |
+| `bun scripts/card-editor.ts export <dir>` / `import <doc.json>…` | `scripts/card-editor.ts` | Bridge to the card-editor artifact: exports each card as an editor document (the source as a word list, the dua and glossary as word ranges, the editable layers), and turns an edited document back into an `apply-card` spec, sending the card back to `pending_verification` |
 | `bun run content` | `scripts/build-content.ts` | Validates, then writes the generated file behind the gate. `dev`, `lint`, `test` and `build` run it first |
 
 The excerpt of a verse or narration that is the dua (`text`) is the reviewer's decision. Until it is made, `text` is a placeholder such as `<<يُنسخ من المصدر: سورة الأنبياء ٨٧، والمقطع يحدده المراجع>>`. Once decided, it is copied from `fullText` or `fullNarration` (never typed), and both fetch scripts and `validate-content` check it is a verbatim part of them.
@@ -72,12 +74,18 @@ draft → pending_verification → verified → approved
 
 The interface never says the content was reviewed by scholars unless every card shown is `approved`; `check-promises` looks for such wording.
 
-## The draft cards now in the repository
+## The cards now in the repository
 
-| Id | Order | Kind | Source | Status |
-|---|---:|---|---|---|
-| `dua_0001` | 1 | quran | al-Fatiha 6–7, the welcome dua (decision ٢). Cites Sahih Muslim 395 in `context.basis` | draft |
-| `dua_0002` | 2 | quran | al-Anbiya 87 | draft |
-| `dua_0003` | 3 | sunnah | Sahih Muslim 2705 (first narration under that number) | draft |
+All three passed stage-one verification on 23 November 2026 (`review.verification` holds each report). The excerpts were chosen by the owner and copied by word position; the authored layer was written to the rules of `09`; an independent verification pass checked every claim against al-Sa'di and al-Muyassar (api.quran.com), Sahih Muslim (the sunnah.com dataset) and Fath al-Bari (Shamela, book 1673). `excerptApproved` and `authoredReviewed` wait for the named reviewer; for `dua_0003`, `secondSourceMatched` waits for Dorar, which refuses this environment.
 
-Their sacred text was copied by `fetch-quran` and `fetch-hadith`; their `text` is a placeholder; their authored layer is marked «[نص تجريبي]»; meaning and sources still hold placeholders for the researcher.
+| Id | Order | Kind | Dua | Status |
+|---|---|---|---|---|
+| `dua_0001` | 1 | quran | al-Fatiha 6–7, both verses (decision ٢); the welcome dua | verified |
+| `dua_0002` | 2 | quran | al-Anbiya 87, words 14–24 | verified |
+| `dua_0003` | 3 | sunnah | Sahih Muslim 2705 (first narration), words 47–73: everything inside the source's quotation marks, the narrator's aside included | verified |
+
+Each report ends with questions for the reviewer (the particle at the start of the Yunus excerpt, the aside in the hadith, «في كل ركعة» in the welcome card, the narrator of 2705).
+
+## Editing the cards
+
+The card editor artifact (https://claude.ai/artifact/SQ7FMrB8D88BwXqRc3ax8t) holds one document per card in its database (`cards/<id>`), written only by the owner and Editors. The dua and glossary terms are chosen there by tapping the first and last word of the copied source. To bring edits back: read the `cards` collection, `bun scripts/card-editor.ts import <doc.json>`, `bun scripts/apply-card.ts content/edits/editor-<id>.json`, then verify again.
