@@ -90,7 +90,7 @@ Qur'an cards from `dua_0004` on show the whole verse range as `text` (`excerptAp
 | `dua_0041` | Qur'an, al-Isra' 80 (whole range shown; excerpt in notes) | verified |
 | `dua_0042` | Sunnah, Muslim 2720 (excerpt proposed) | pending_verification |
 | `dua_0043` | Qur'an, al-Kahf 10 (whole range shown; excerpt in notes) | verified |
-| `dua_0044` | Qur'an, Maryam 4 (whole range shown; excerpt in notes) | verified |
+| `dua_0044` | Qur'an, Maryam 4–6 (whole range shown; excerpt in notes) | verified |
 | `dua_0045` | Sunnah, Muslim 202 (excerpt proposed) | pending_verification |
 | `dua_0046` | Qur'an, Ta-Ha 25–28 (whole range shown; excerpt in notes) | verified |
 | `dua_0047` | Qur'an, Ta-Ha 114 (whole range shown; excerpt in notes) | verified |
@@ -220,3 +220,9 @@ Qur'an cards from `dua_0004` on show the whole verse range as `text` (`excerptAp
 | `dua_0184` | Sunnah, Muslim 2723 (excerpt proposed) | pending_verification |
 | `dua_0185` | Sunnah, Muslim 2867 (excerpt proposed) | pending_verification |
 | `dua_0186` | Qur'an, al-Nas 1–6 (whole range shown; excerpt in notes) | pending_verification |
+| `dua_0187` | Qur'an, al-Nahl 98–99 (whole range shown; excerpt in notes) | verified |
+| `dua_0188` | Qur'an, al-A'raf 200–201 (whole range shown; excerpt in notes) | verified |
+| `dua_0189` | Qur'an, al-Kahf 23–24 (whole range shown; excerpt in notes) | verified |
+| `dua_0190` | Qur'an, al-Zumar 46 (whole range shown; excerpt in notes) | verified |
+| `dua_0191` | Qur'an, Yusuf 23 (whole range shown; excerpt in notes) | pending_verification |
+| `dua_0192` | Qur'an, al-Shu'ara' 87–89 (whole range shown; excerpt in notes) | verified |
